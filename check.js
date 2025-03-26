@@ -3,8 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainTwoCheck = document.getElementById("main-two");
     
     // Load saved state from Local Storage
-    if (localStorage.getItem("checkboxState") === "checked") {
+    if (mainOneCheck.localStorage.getItem("checkboxState") === "checked") {
         mainOneCheck.checked = true;
+    }
+
+    if (mainTwoCheck.localStorage.getItem("checkboxState") === "checked") {
         mainTwoCheck.checked = true;
     }
 

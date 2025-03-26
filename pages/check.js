@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const checkbox = document.getElementById("rememberMe");
+
+    console.log('DOM content loaded');
     
     // Load saved state from Local Storage
     if (localStorage.getItem("checkboxState") === "checked") {

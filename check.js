@@ -1,30 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const mainOneCheck = document.getElementById("main-one");
-    const mainTwoCheck = document.getElementById("main-two");
-    
-    // Load saved state from Local Storage
-    if (mainOneCheck.localStorage.getItem("checkboxState") === "checked") {
-        mainOneCheck.checked = true;
-    }
+    const checkboxes = document.querySelectorAll("input[type='checkbox']");
 
-    if (mainTwoCheck.localStorage.getItem("checkboxState") === "checked") {
-        mainTwoCheck.checked = true;
-    }
+    checkboxes.forEach(checkbox => {
+        const checkboxId = checkbox.id;
+        const savedState = localStorage.getItem(`checkboxState_${checkboxId}`);
 
-    // Listen for changes and update Local Storage
-    mainOneCheck.addEventListener("change", function () {
-        if (mainOneCheck.checked) {
-            localStorage.setItem("checkboxState", "checked");
-        } else {
-            localStorage.setItem("checkboxState", "unchecked");
+        if (savedState === "checked") {
+            checkbox.checked = true;
         }
-    });
 
-    mainTwoCheck.addEventListener("change", function () {
-        if (mainTwoCheck.checked) {
-            localStorage.setItem("checkboxState", "checked");
-        } else {
-            localStorage.setItem("checkboxState", "unchecked");
-        }
+        checkbox.addEventListener("change", function () {
+            localStorage.setItem(`checkboxState_${checkboxId}`, checkbox.checked ? "checked" : "unchecked");
+        });
     });
 });

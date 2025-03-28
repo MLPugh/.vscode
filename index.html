@@ -6,6 +6,7 @@
 
   <link rel="stylesheet" href="styles.css">
   <script src="check.js"></script>
+  <script src="tabsystemregions.js"></script>
 </head>
 <body>
   <header></header>
@@ -25,7 +26,7 @@
     <!-- Quests (Leads to Other Pages)-->
     <section>
       <p>Sort By:</p>
-        <select>
+        <select id="location-select">
           <optgroup label="Surface">
             <option>All Regions</option>
             <option>North Hyrule Field</option>
@@ -44,30 +45,79 @@
             <option>Tabantha Tundra</option>
             <option>Gerudo Highlands</option>
           </optgroup>
-          <optgroup label="Sky">
-            <option>Central Hyrule Skyview</option>
-            <option>Hebra Sky</option>
-            <option>Eldin Sky</option>
-            <option>Akkala Sky</option>
-            <option>Lanayru Sky</option>
-            <option>Necluda Sky</option>
-            <option>Faron Sky</option>
-            <option>Gerudo Sky</option>
-          </optgroup>
         </select>
-      <h2>Quests</h2> <!-- Make Accordians-->
-      <h3 class="accordion">Main Quests</h3>
-        <ul class="panel">
-          <li>
-            <label for="main-one">Find Princess Zelda</label>
-            <input type="checkbox" id="main-one" class="checkbox" />
-            <p>Great Sky Island - Central Hyrule Sky</p>
-          </li>
 
-          <li>
-            <label for="main-two">The Closed Door</label>
-            <input type="checkbox" id="main-two" class="checkbox"/>
-          </li>
+      <h2>Quests</h2>
+      <h3 class="accordion">Main Quests</h3>
+
+      <div class="panel">
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'all-regions')" id="defaultOpen">All Regions</button>
+          <button class="tablinks" onclick="openCity(event, 'central-sky')" id="defaultOpen">Central Hyrule Sky</button>
+          <button class="tablinks" onclick="openCity(event, 'hebra-sky')">Hebra Sky</button>
+          <button class="tablinks" onclick="openCity(event, 'eldin-sky')">Eldin Sky</button>
+          <button class="tablinks" onclick="openCity(event, 'akkala-sky')">Akkala Sky</button>
+          <button class="tablinks" onclick="openCity(event, 'lanayru-sky')">Lanayru Sky</button>
+          <button class="tablinks" onclick="openCity(event, 'necluda-sky')">Necluda Sky</button>
+          <button class="tablinks" onclick="openCity(event, 'faron-sky')">Faron Sky</button>
+          <button class="tablinks" onclick="openCity(event, 'gerudo-sky')">Gerudo Sky</button>
+        </div>
+
+        <div id="all-regions" class="tabcontent">
+          <h3>All Regions</h3>
+          <ul>
+            <li>
+              <label for="main-one">Find Princess Zelda</label>
+              <input type="checkbox" id="main-one" class="checkbox" />
+              <p>Great Sky Island - Central Hyrule Sky</p>
+            </li>
+  
+            <li>
+              <label for="main-two">The Closed Door</label>
+              <input type="checkbox" id="main-two" class="checkbox"/>
+              <p>Great Sky Island - Central Hyrule Sky</p>
+            </li>
+
+            <li>
+              <label for="main-two">The Closed Door</label>
+              <input type="checkbox" id="main-two" class="checkbox"/>
+              <p>Great Sky Island - Central Hyrule Sky</p>
+            </li>
+            
+          </ul>
+        </div>
+        
+        <div id="central-sky" class="tabcontent" style="display: none;">
+          <h3>Central Hyrule Sky</h3>
+  
+          <ul>
+            <li>
+              <label for="main-one">Find Princess Zelda</label>
+              <input type="checkbox" id="main-one" class="checkbox" />
+              <p>Great Sky Island - Central Hyrule Sky</p>
+            </li>
+  
+            <li>
+              <label for="main-two">The Closed Door</label>
+              <input type="checkbox" id="main-two" class="checkbox"/>
+              <p>Great Sky Island - Central Hyrule Sky</p>
+            </li>
+
+            <li>
+              <label for="main-two">The Closed Door</label>
+              <input type="checkbox" id="main-two" class="checkbox"/>
+              <p>Great Sky Island - Central Hyrule Sky</p>
+            </li>
+          </ul>
+        </div>
+
+        <div id="hebra-sky" class="tabcontent" style="display: none;">
+          <h3>Hebra Sky</h3>
+        </div>
+      </div>
+
+
+        <ul>
 
           <li>
             <label for="main-three">To the Kingdom of Hyrule</label>
@@ -174,6 +224,7 @@
             <input type="checkbox" id="main-twentythree" class="checkbox"/>
           </li>
         </ul>
+      </div>
         
       <h3 class="accordion">Side Adventures</h3>
         <ul class="panel">

@@ -28,19 +28,12 @@
       <p>Sort By:</p>
         <select id="location-select">
           <optgroup label="Surface">
-            <option>All Regions</option>
-            <option>North Hyrule Field</option>
-            <option>South Hyrule Field</option>
-            <option>Hyrule Ridge and Tabantha Frontier</option>
-            <option>Hebra Mountains</option>
             <option>West Necluda and Lanayru Wetlands</option>
             <option>Faron</option>
-            <option>Eldin</option>
             <option>Mount Lanayru</option>
             <option>Lanayru Great Spring</option>
             <option>East Necluda</option>
             <option>Akkala</option>
-            <option>Gerudo Desert</option>
             <option>Great Hyrule Forest</option>
             <option>Tabantha Tundra</option>
             <option>Gerudo Highlands</option>
@@ -51,119 +44,92 @@
       <h3 class="accordion">Main Quests</h3>
 
       <div class="panel">
-        <div class="tab">
-          <button class="tablinks" onclick="openCity(event, 'all-regions')" id="defaultOpen">All Regions</button>
-          <button class="tablinks" onclick="openCity(event, 'central-sky')" id="defaultOpen">Central Hyrule Sky</button>
-          <button class="tablinks" onclick="openCity(event, 'hebra-sky')">Hebra Sky</button>
-          <button class="tablinks" onclick="openCity(event, 'eldin-sky')">Eldin Sky</button>
-          <button class="tablinks" onclick="openCity(event, 'akkala-sky')">Akkala Sky</button>
-          <button class="tablinks" onclick="openCity(event, 'lanayru-sky')">Lanayru Sky</button>
-          <button class="tablinks" onclick="openCity(event, 'necluda-sky')">Necluda Sky</button>
-          <button class="tablinks" onclick="openCity(event, 'faron-sky')">Faron Sky</button>
-          <button class="tablinks" onclick="openCity(event, 'gerudo-sky')">Gerudo Sky</button>
-        </div>
+        <div class="tab" id="myBtnContainer">
+          <button class="btn tablinks" onclick="filterSelection('all')">All Regions</button>
 
-        <div id="all-regions" class="tabcontent">
-          <h3>All Regions</h3>
-          <ul>
-            <li>
-              <label for="main-one">Find Princess Zelda</label>
-              <input type="checkbox" id="main-one" class="checkbox" />
-              <p>Great Sky Island - Central Hyrule Sky</p>
-            </li>
-  
-            <li>
-              <label for="main-two">The Closed Door</label>
-              <input type="checkbox" id="main-two" class="checkbox"/>
-              <p>Great Sky Island - Central Hyrule Sky</p>
-            </li>
+          <button class="btn tablinks" onclick="filterSelection('northhyrule')">North Hyrule Field</button>
+          <button class="btn tablinks" onclick="filterSelection('southhyrule')">South Hyrule Field</button>
+          <button class="btn tablinks" onclick="filterSelection('hyruleridge')">Hyrule Ridge and Tabantha Frontier</button>
+          <button class="btn tablinks" onclick="filterSelection('hebramountains')">Hebra Mountains</button>
+          <button class="btn tablinks" onclick="filterSelection('eldin')">Eldin</button>
+          <button class="btn tablinks" onclick="filterSelection('gerudodesert')">Gerudo Desert</button>
+          <button class="btn tablinks" onclick="filterSelection('lanayru')">Lanayru Great Spring</button>
 
-            <li>
-              <label for="main-two">The Closed Door</label>
-              <input type="checkbox" id="main-two" class="checkbox"/>
-              <p>Great Sky Island - Central Hyrule Sky</p>
-            </li>
-            
-          </ul>
+          <button class="btn tablinks" onclick="filterSelection('central-sky')">Central Hyrule Sky</button>
+          <button class="btn tablinks" onclick="filterSelection('hebra-sky')">Hebra Sky</button>
+          <button class="btn tablinks" onclick="filterSelection('eldin-sky')">Eldin Sky</button>
+          <button class="btn tablinks" onclick="filterSelection('akkala-sky')">Akkala Sky</button>
+          <button class="btn tablinks" onclick="filterSelection('lanayru-sky')">Lanayru Sky</button>
+          <button class="btn tablinks" onclick="filterSelection('necluda-sky')">Necluda Sky</button>
+          <button class="btn tablinks" onclick="filterSelection('faron-sky')">Faron Sky</button>
+          <button class="btn tablinks" onclick="filterSelection('gerudo-sky')">Gerudo Sky</button>
+
+          <button class="btn tablinks" onclick="filterSelection('nhydepths')">North Hyrule Depths</button>
+          <button class="btn tablinks" onclick="filterSelection('shydepths')">South Hyrule Depths</button>
         </div>
         
-        <div id="central-sky" class="tabcontent" style="display: none;">
-          <h3>Central Hyrule Sky</h3>
-  
-          <ul>
-            <li>
-              <label for="main-one">Find Princess Zelda</label>
-              <input type="checkbox" id="main-one" class="checkbox" />
-              <p>Great Sky Island - Central Hyrule Sky</p>
-            </li>
-  
-            <li>
-              <label for="main-two">The Closed Door</label>
-              <input type="checkbox" id="main-two" class="checkbox"/>
-              <p>Great Sky Island - Central Hyrule Sky</p>
-            </li>
-
-            <li>
-              <label for="main-two">The Closed Door</label>
-              <input type="checkbox" id="main-two" class="checkbox"/>
-              <p>Great Sky Island - Central Hyrule Sky</p>
-            </li>
-          </ul>
-        </div>
-
-        <div id="hebra-sky" class="tabcontent" style="display: none;">
-          <h3>Hebra Sky</h3>
-        </div>
-      </div>
-
-
-        <ul>
-
-          <li>
+        <ul class="container">
+          <li class="filterDiv central-sky">
+            <label for="main-one">Find Princess Zelda</label>
+            <input type="checkbox" id="main-one" class="checkbox" />
+            <p>Great Sky Island - Central Hyrule Sky</p>
+          </li>
+          <li class="filterDiv central-sky">
+            <label for="main-two">The Closed Door</label>
+            <input type="checkbox" id="main-two" class="checkbox" />
+            <p>Great Sky Island - Central Hyrule Sky</p>
+          </li>
+          <li class="filterDiv central-sky">
             <label for="main-three">To the Kingdom of Hyrule</label>
             <input type="checkbox" id="main-three" class="checkbox"/>
+            <p>Great Sky Island - Central Hyrule Sky</p>
           </li>
-
-          <li>
+          <li class="filterDiv northhyrule">
             <label for="main-four">Crisis at Hyrule Castle</label>
             <input type="checkbox" id="main-four" class="checkbox"/>
+            <p>Lookout Landing - North Hyrule Field</p>
           </li>
-
-          <li>
+          <li class="filterDiv hebramountains eldin gerudodesert lanayru">
             <label for="main-five">Regional Phenomena</label>
             <input type="checkbox" id="main-five" class="checkbox"/>
+            <p>Hebra, Eldin, Gerudo, Lanayru</p>
           </li>
-
-          <li>
+          <li class="filterDiv nhydepths">
             <label for="main-six">Camera Work in the Depths</label>
             <input type="checkbox" id="main-six" class="checkbox"/>
+            <p>Iayusus Lightroot - North Hyrule Depths</p>
           </li>
-
-          <li>
+          <li class="filterDiv hyruleridge">
             <label for="main-seven">Impa and the Geoglyphs</label>
             <input type="checkbox" id="main-seven" class="checkbox"/>
+            <p>New Serenne Stable - Hyrule Ridge</p>
           </li>
-
-          <li>
+          <li class="filterDiv hyruleridge">
             <label for="main-eight">The Dragon's Tears</label>
             <input type="checkbox" id="main-eight" class="checkbox"/>
+            <p>Rauru Geoglyph - Hyrule Ridge</p>
           </li>
-
-          <li>
+          <li class="filterDiv shydepths">
             <label for="main-nine">A Mystery in the Depths</label>
             <input type="checkbox" id="main-nine" class="checkbox"/>
+            <p>The Great Abandoned Central Mine - South Hyrule Depths</p>
           </li>
-
-          <li>
+          <li class="filterDiv hebramountains">
             <label for="main-ten">Tulin of Rito Village</label>
             <input type="checkbox" id="main-ten" class="checkbox"/>
           </li>
-
-          <li>
+          <li class="filterDiv eldin">
             <label for="main-eleven">Yunobo of Goron City</label>
             <input type="checkbox" id="main-eleven" class="checkbox"/>
+            <p>Goron City - Eldin</p>
           </li>
-
+          <li>
+            <label for="main-twelve">The Sludge-Covered Statue</label>
+            <input type="checkbox" id="main-twelve" class="checkbox"/>
+          </li>
+        </div>
+      
+        <ul>
           <li>
             <label for="main-twelve">The Sludge-Covered Statue</label>
             <input type="checkbox" id="main-twelve" class="checkbox"/>
@@ -603,5 +569,6 @@
 
   </main>
   <footer></footer>
+  <script src="filter.js"></script>
 </body>
 </html>

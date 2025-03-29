@@ -10,7 +10,6 @@ html{
   border: 1px solid #ccc;
   background-color: #f1f1f1;
   width: 30%;
-  height: 300px;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -69,4 +68,19 @@ html{
   
   .active, .accordion:hover {
     background-color: #ccc; 
+  }
+
+  .filterDiv {
+    padding: 1vh;
+    display: none;
+    border-bottom: 2px black solid;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .container {
+    margin-top: 20px;
+    overflow: hidden;
   }

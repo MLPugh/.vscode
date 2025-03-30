@@ -31,7 +31,6 @@
             <option>West Necluda and Lanayru Wetlands</option>
             <option>Faron</option>
             <option>Mount Lanayru</option>
-            <option>Lanayru Great Spring</option>
             <option>East Necluda</option>
             <option>Akkala</option>
             <option>Great Hyrule Forest</option>
@@ -40,6 +39,7 @@
           </optgroup>
         </select>
 
+      <!--Finish filtering once you finish story NO SPOILERS-->
       <h2>Quests</h2>
       <h3 class="accordion">Main Quests</h3>
 
@@ -53,13 +53,13 @@
           <button class="btn tablinks" onclick="filterSelection('hebramountains')">Hebra Mountains</button>
           <button class="btn tablinks" onclick="filterSelection('eldin')">Eldin</button>
           <button class="btn tablinks" onclick="filterSelection('gerudodesert')">Gerudo Desert</button>
-          <button class="btn tablinks" onclick="filterSelection('lanayru')">Lanayru Great Spring</button>
+          <button class="btn tablinks" onclick="filterSelection('lanayruspring')">Lanayru Great Spring</button>
 
           <button class="btn tablinks" onclick="filterSelection('central-sky')">Central Hyrule Sky</button>
           <button class="btn tablinks" onclick="filterSelection('hebra-sky')">Hebra Sky</button>
           <button class="btn tablinks" onclick="filterSelection('eldin-sky')">Eldin Sky</button>
           <button class="btn tablinks" onclick="filterSelection('akkala-sky')">Akkala Sky</button>
-          <button class="btn tablinks" onclick="filterSelection('lanayru-sky')">Lanayru Sky</button>
+          <button class="btn tablinks" onclick="filterSelection('lanayrusky')">Lanayru Sky</button>
           <button class="btn tablinks" onclick="filterSelection('necluda-sky')">Necluda Sky</button>
           <button class="btn tablinks" onclick="filterSelection('faron-sky')">Faron Sky</button>
           <button class="btn tablinks" onclick="filterSelection('gerudo-sky')">Gerudo Sky</button>
@@ -89,7 +89,7 @@
             <input type="checkbox" id="main-four" class="checkbox"/>
             <p>Lookout Landing - North Hyrule Field</p>
           </li>
-          <li class="filterDiv hebramountains eldin gerudodesert lanayru">
+          <li class="filterDiv hebramountains eldin gerudodesert lanayruspring">
             <label for="main-five">Regional Phenomena</label>
             <input type="checkbox" id="main-five" class="checkbox"/>
             <p>Hebra, Eldin, Gerudo, Lanayru</p>
@@ -117,75 +117,69 @@
           <li class="filterDiv hebramountains">
             <label for="main-ten">Tulin of Rito Village</label>
             <input type="checkbox" id="main-ten" class="checkbox"/>
+            <p>Rito Village - Hebra Mountains</p>
           </li>
           <li class="filterDiv eldin">
             <label for="main-eleven">Yunobo of Goron City</label>
             <input type="checkbox" id="main-eleven" class="checkbox"/>
             <p>Goron City - Eldin</p>
           </li>
-          <li>
+          <li class="filterDiv lanayruspring">
             <label for="main-twelve">The Sludge-Covered Statue</label>
             <input type="checkbox" id="main-twelve" class="checkbox"/>
+            <p>Zora's Domain- Lanayru Great Spring</p>
           </li>
-        </div>
-      
-        <ul>
-          <li>
-            <label for="main-twelve">The Sludge-Covered Statue</label>
-            <input type="checkbox" id="main-twelve" class="checkbox"/>
-          </li>
-
-          <li>
+          <li class="filterDiv lanayruspring">
             <label for="main-thirteen">Sidon of the Zora</label>
             <input type="checkbox" id="main-thirteen" class="checkbox"/>
+            <p>Zora's Domain - Lanayru Great Spring</p>
           </li>
-
-          <li>
+          <li class="filterDiv lanayruspring">
             <label for="main-fourteen">Restoring the Zora Armor</label>
             <input type="checkbox" id="main-fourteen" class="checkbox"/>
+            <p>Zora's Domain - Lanayru Great Spring</p>
           </li>
-
-          <li>
+          <li class="filterDiv lanayruspring">
             <label for="main-fifteen">The Broken Slate</label>
             <input type="checkbox" id="main-fifteen" class="checkbox"/>
+            <p>Toto Lake - Lanayru Great Spring</p>
           </li>
-
-          <li>
+          <li class="filterDiv lanayrusky">
             <label for="main-sixteen">Clues to the Sky</label>
             <input type="checkbox" id="main-sixteen" class="checkbox"/>
+            <p>Floating Scales Island - Lanayru Sky</p>
           </li>
-
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="main-seventeen">Riju of Gerudo Town</label>
             <input type="checkbox" id="main-seventeen" class="checkbox"/>
+            <p>Gerudo Town - Gerudo Desert</p>
           </li>
-
-          <li>
+          <li class="filterDiv">
             <label for="main-eighteen">Find the Fifth Sage</label>
             <input type="checkbox" id="main-eighteen" class="checkbox"/>
           </li>
 
-          <li>
+          <li class="filterDiv">
             <label for="main-nineteen">Secret of the Ring Ruins</label>
             <input type="checkbox" id="main-nineteen" class="checkbox"/>
           </li>
 
-          <li>
+          <li class="filterDiv">
             <label for="main-twenty">Guidance from Ages Past</label>
             <input type="checkbox" id="main-twenty" class="checkbox"/>
           </li>
 
-          <li>
+          <li class="filterDiv">
             <label for="main-twentyone">Trail of the Master Sword</label>
             <input type="checkbox" id="main-twentyone" class="checkbox"/>
           </li>
 
-          <li>
+          <li class="filterDiv">
             <label for="main-twentytwo">Recovering the Hero's Sword</label>
             <input type="checkbox" id="main-twentytwo" class="checkbox"/>
           </li>
 
-          <li>
+          <li class="filterDiv">
             <label for="main-twentythree">Destroy Ganondorf</label>
             <input type="checkbox" id="main-twentythree" class="checkbox"/>
           </li>
@@ -495,8 +489,140 @@
          </li>
         </ul>
 
+      <h3 class="accordion">Shrine Quests</h3>
+      <div class="panel">
+        <ul class="container">
+          <li>
+            <label for="shrine-one">The Satori Mountain Crystal</label>
+            <input type="checkbox" id="shrine-one" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-two">The White Bird's Guidance</label>
+            <input type="checkbox" id="shrine-two" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-three">The Gisa Crater Crystal</label>
+            <input type="checkbox" id="shrine-three" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-four">The North Hebra Mountains Crystal</label>
+            <input type="checkbox" id="shrine-four" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-five">The Northwest Hebra Cave Crystal</label>
+            <input type="checkbox" id="shrine-five" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-six">A Pretty Stone and Five Golden Apples</label>
+            <input type="checkbox" id="shrine-six" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-seven">None Shall Pass?</label>
+            <input type="checkbox" id="shrine-seven" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-eight">Maca's Special Place</label>
+            <input type="checkbox" id="shrine-eight" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-nine">The Death Caldera Crystal</label>
+            <input type="checkbox" id="shrine-nine" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-ten">The Lake Intenoch Cave Crystal</label>
+            <input type="checkbox" id="shrine-ten" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-eleven">Rocks for Sale</label>
+            <input type="checkbox" id="shrine-eleven" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-twelve">Dyeing to Find It</label>
+            <input type="checkbox" id="shrine-twelve" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-thirteen">The High Spring and the Light Rings</label>
+            <input type="checkbox" id="shrine-thirteen" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-fourteen">The Lanayru Road Crystal</label>
+            <input type="checkbox" id="shrine-fourteen" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-fifteen">The Ralis Channel Crystal</label>
+            <input type="checkbox" id="shrine-fifteen" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-sixteen">Keys Born of Water</label>
+            <input type="checkbox" id="shrine-sixteen" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-seventeen">The Oakle's Navel Cave Crystal</label>
+            <input type="checkbox" id="shrine-seventeen" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-eighteen">Ride the Giant Horse</label>
+            <input type="checkbox" id="shrine-eighteen" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-nineteen">The Lake Hylia Crystal</label>
+            <input type="checkbox" id="shrine-nineteen" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-twenty">Legend of the Soaring Spear</label>
+            <input type="checkbox" id="shrine-twenty" class="checkbox" />
+          </li>
+
+
+          <li>
+            <label for="shrine-twentyone">The Gisa Crater Crystal</label>
+            <input type="checkbox" id="shrine-twentyone" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-twentytwo">The Gisa Crater Crystal</label>
+            <input type="checkbox" id="shrine-twentytwo" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-twentythree">The Gisa Crater Crystal</label>
+            <input type="checkbox" id="shrine-twentythree" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-twentyfour">The Gisa Crater Crystal</label>
+            <input type="checkbox" id="shrine-twentyfour" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-twentyfive">The Gisa Crater Crystal</label>
+            <input type="checkbox" id="shrine-twentyfive" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-twentysix">The Gisa Crater Crystal</label>
+            <input type="checkbox" id="shrine-twentysix" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-twentyseven">The Gisa Crater Crystal</label>
+            <input type="checkbox" id="shrine-twentyseven" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-twentyeight">The Gisa Crater Crystal</label>
+            <input type="checkbox" id="shrine-twentyeight" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-twentynine">The Gisa Crater Crystal</label>
+            <input type="checkbox" id="shrine-twentynine" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-thirty">The Gisa Crater Crystal</label>
+            <input type="checkbox" id="shrine-thirty" class="checkbox" />
+          </li>
+          <li>
+            <label for="shrine-thirtyone">The Gisa Crater Crystal</label>
+            <input type="checkbox" id="shrine-thirtyone" class="checkbox" />
+          </li>
+        </ul>
+      </div>
+
+
       <h2>Coming Soon</h2>
-      <h3>Shrine Quests</h3>
       <h3>Side Quests</h3>
       <h3>Memories</h3>
     </section>

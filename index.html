@@ -35,486 +35,574 @@
     - Buy me a coffee....
     - Add mouseover + mouseout states for tab menu
     - filter out completed
+    -finish transfering out locations
 
     -->
 
-    <!--Home + Description-->
-    <section>
-      <h1>How to 100% Tears of the Kingdom</h1>
-      <h2>According to Exion Vault</h2>
+        <!--Home + Description-->
+        <section>
+          <h1>How to 100% Tears of the Kingdom</h1>
+          <h2>According to Exion Vault</h2>
+    
+          <h3>Free, Lightweight, and Comprehensive</h3>
+          <p>Your one stop shop for 100% TOTK completion. Use ALL of our 
+             checklists for free! Updated frequently!
+          </p>
+    
+        </section>
+    
+        <!-- Quests (Leads to Other Pages)-->
+        <section>
+          <p>Sort By:</p>
+            <select id="location-select">
+              <optgroup label="Surface">
+                <option>West Necluda and Lanayru Wetlands</option>
+                <option>Faron</option>
+                <option>Mount Lanayru</option>
+                <option>East Necluda</option>
+                <option>Akkala</option>
+                <option>Great Hyrule Forest</option>
+                <option>Tabantha Tundra</option>
+                <option>Gerudo Highlands</option>
+              </optgroup>
+            </select>
+    
+          <!--Finish filtering once you finish story NO SPOILERS-->
+          <h2>Quests</h2>
+          <h3 class="accordion">Main Quests</h3>
+    
+          <div class="panel">
+            <div class="tab" id="myBtnContainer">
+            
+              <button class="btn tablinks" onclick="filterSelection('all')">All Regions</button>
 
-      <h3>Free, Lightweight, and Comprehensive</h3>
-      <p>Your one stop shop for 100% TOTK completion. Use ALL of our 
-         checklists for free! Updated frequently!
-      </p>
+              <style>
+                .dropdown {
+                  position: relative;
+                  display: block;
+                  width: 100%;
+                }
+                
+                .dropdown-content {
+                  display: none;
+                  width: 100%;
+                  position: relative;
+                  background-color: #f9f9f9;
+                  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                  padding: 12px 16px;
+                  z-index: 1;
+                }
+                
+                
+                </style>
 
-    </section>
+                <script>
+                  function myfunction() {
+                    
+                    var surfacedropdown = document.querySelector('#surfacedropdown');
+                    var surfacebutton= document.querySelector('#surfacebutton');
+                    
+                    var northHyrule = document.querySelector("#northHyrule");
 
-    <!-- Quests (Leads to Other Pages)-->
-    <section>
-      <p>Sort By:</p>
-        <select id="location-select">
-          <optgroup label="Surface">
-            <option>West Necluda and Lanayru Wetlands</option>
-            <option>Faron</option>
-            <option>Mount Lanayru</option>
-            <option>East Necluda</option>
-            <option>Akkala</option>
-            <option>Great Hyrule Forest</option>
-            <option>Tabantha Tundra</option>
-            <option>Gerudo Highlands</option>
-          </optgroup>
-        </select>
+                    surfacebutton.classList.toggle("active");
 
-      <!--Finish filtering once you finish story NO SPOILERS-->
-      <h2>Quests</h2>
-      <h3 class="accordion">Main Quests</h3>
+                    if (surfacebutton.classList.contains('active')){
+                      surfacedropdown.style.display = "block";
+                      northHyrule.classList.toggle("active");
+                    }else {
+                      surfacedropdown.style.display = "none";
+                    }
+                  };
 
-      <div class="panel">
-        <div class="tab" id="myBtnContainer">
+                  function skyfunction() {
+                    var skydropdown = document.querySelector('#skydropdown');
+                    var skybutton = document.querySelector('#skybutton');
 
-          <button class="btn tablinks" onclick="filterSelection('all')">All Regions</button>
-          <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Surface</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a class="btn tablinks" onclick="filterSelection('northhyrule')">North Hyrule Field</a>
-              <a>Hebra</a>
-              <a>Eldin</a>
+                    skybutton.classList.toggle("active");
+                    
+                    if (skybutton.classList.contains('active')){
+                      skydropdown.style.display="block";
+                      surfacebutton.classList.toggle("active");
+                    } else {
+                      skydropdown.style.display = "none";
+                    }
+                  };
+
+                  function depthfunction() {
+                    var depthdropdown = document.querySelector('#depthdropdown');
+                    var depthbutton = document.querySelector('#depthbutton');
+
+                    depthbutton.classList.toggle("active");
+
+                    if (depthbutton.classList.contains('active')){
+                      depthdropdown.style.display="block";
+
+                      surfacebutton.classList.toggle("active");
+                      skybutton.classList.toggle("active");
+                    } else {
+                      depthdropdown.style.display = "none";
+                    }
+                  };
+  
+
+                </script>
+                
+                <div class="dropdown">
+                  <button id="surfacebutton" onclick="myfunction();">Surface</button>
+                  <div id="surfacedropdown" class="dropdown-content">
+                    <button  id="northHyrule" class="btn tablinks" onclick="filterSelection('northhyrule')">North Hyrule Field</button>
+                    <button class="btn tablinks" onclick="filterSelection('southhyrule')">South Hyrule Field</button>
+                    <button class="btn tablinks" onclick="filterSelection('hyruleridge')">Hyrule Ridge and Tabantha Frontier</button>
+                    <button class="btn tablinks" onclick="filterSelection('hebramountains')">Hebra Mountains</button>
+                    <button class="btn tablinks" onclick="filterSelection('eldin')">Eldin</button>
+                    <button class="btn tablinks" onclick="filterSelection('gerudodesert')">Gerudo Desert</button>
+                    <button class="btn tablinks" onclick="filterSelection('lanayruspring')">Lanayru Great Spring</button>
+                  </div>
+                </div>
+    
+                <div class="dropdown">
+                  <button id="skybutton" onclick="skyfunction();">Sky</button>
+                  <div id="skydropdown" class="dropdown-content">
+                    <button class="btn tablinks" onclick="filterSelection('central-sky')">Central Hyrule Sky</button>
+                    <button class="btn tablinks" onclick="filterSelection('hebra-sky')">Hebra Sky</button>
+                    <button class="btn tablinks" onclick="filterSelection('eldin-sky')">Eldin Sky</button>
+                    <button class="btn tablinks" onclick="filterSelection('akkala-sky')">Akkala Sky</button>
+                    <button class="btn tablinks" onclick="filterSelection('lanayrusky')">Lanayru Sky</button>
+                    <button class="btn tablinks" onclick="filterSelection('necluda-sky')">Necluda Sky</button>
+                    <button class="btn tablinks" onclick="filterSelection('faron-sky')">Faron Sky</button>
+                    <button class="btn tablinks" onclick="filterSelection('gerudo-sky')">Gerudo Sky</button>
+                  </div>
+                </div>
+
+                <div class="dropdown">
+                  <button id="depthbutton" onclick="depthfunction();">Depths</button>
+                  <div id="depthdropdown" class="dropdown-content">
+                    <button class="btn tablinks" onclick="filterSelection('nhydepths')">North Hyrule Depths</button>
+                    <button class="btn tablinks" onclick="filterSelection('shydepths')">South Hyrule Depths</button>
+                  </div>
+                </div>
             </div>
+            
+            <ul class="container">
+              <li class="filterDiv central-sky">
+                <label for="main-one">Find Princess Zelda</label>
+                <input type="checkbox" id="main-one" class="checkbox" />
+                <p>Great Sky Island - Central Hyrule Sky</p>
+              </li>
+              <li class="filterDiv central-sky">
+                <label for="main-two">The Closed Door</label>
+                <input type="checkbox" id="main-two" class="checkbox" />
+                <p>Great Sky Island - Central Hyrule Sky</p>
+              </li>
+              <li class="filterDiv central-sky">
+                <label for="main-three">To the Kingdom of Hyrule</label>
+                <input type="checkbox" id="main-three" class="checkbox"/>
+                <p>Great Sky Island - Central Hyrule Sky</p>
+              </li>
+              <li class="filterDiv northhyrule">
+                <label for="main-four">Crisis at Hyrule Castle</label>
+                <input type="checkbox" id="main-four" class="checkbox"/>
+                <p>Lookout Landing - North Hyrule Field</p>
+              </li>
+              <li class="filterDiv hebramountains eldin gerudodesert lanayruspring">
+                <label for="main-five">Regional Phenomena</label>
+                <input type="checkbox" id="main-five" class="checkbox"/>
+                <p>Hebra, Eldin, Gerudo, Lanayru</p>
+              </li>
+              <li class="filterDiv nhydepths">
+                <label for="main-six">Camera Work in the Depths</label>
+                <input type="checkbox" id="main-six" class="checkbox"/>
+                <p>Iayusus Lightroot - North Hyrule Depths</p>
+              </li>
+              <li class="filterDiv hyruleridge">
+                <label for="main-seven">Impa and the Geoglyphs</label>
+                <input type="checkbox" id="main-seven" class="checkbox"/>
+                <p>New Serenne Stable - Hyrule Ridge</p>
+              </li>
+              <li class="filterDiv hyruleridge">
+                <label for="main-eight">The Dragon's Tears</label>
+                <input type="checkbox" id="main-eight" class="checkbox"/>
+                <p>Rauru Geoglyph - Hyrule Ridge</p>
+              </li>
+              <li class="filterDiv shydepths">
+                <label for="main-nine">A Mystery in the Depths</label>
+                <input type="checkbox" id="main-nine" class="checkbox"/>
+                <p>The Great Abandoned Central Mine - South Hyrule Depths</p>
+              </li>
+              <li class="filterDiv hebramountains">
+                <label for="main-ten">Tulin of Rito Village</label>
+                <input type="checkbox" id="main-ten" class="checkbox"/>
+                <p>Rito Village - Hebra Mountains</p>
+              </li>
+              <li class="filterDiv eldin">
+                <label for="main-eleven">Yunobo of Goron City</label>
+                <input type="checkbox" id="main-eleven" class="checkbox"/>
+                <p>Goron City - Eldin</p>
+              </li>
+              <li class="filterDiv lanayruspring">
+                <label for="main-twelve">The Sludge-Covered Statue</label>
+                <input type="checkbox" id="main-twelve" class="checkbox"/>
+                <p>Zora's Domain- Lanayru Great Spring</p>
+              </li>
+              <li class="filterDiv lanayruspring">
+                <label for="main-thirteen">Sidon of the Zora</label>
+                <input type="checkbox" id="main-thirteen" class="checkbox"/>
+                <p>Zora's Domain - Lanayru Great Spring</p>
+              </li>
+              <li class="filterDiv lanayruspring">
+                <label for="main-fourteen">Restoring the Zora Armor</label>
+                <input type="checkbox" id="main-fourteen" class="checkbox"/>
+                <p>Zora's Domain - Lanayru Great Spring</p>
+              </li>
+              <li class="filterDiv lanayruspring">
+                <label for="main-fifteen">The Broken Slate</label>
+                <input type="checkbox" id="main-fifteen" class="checkbox"/>
+                <p>Toto Lake - Lanayru Great Spring</p>
+              </li>
+              <li class="filterDiv lanayrusky">
+                <label for="main-sixteen">Clues to the Sky</label>
+                <input type="checkbox" id="main-sixteen" class="checkbox"/>
+                <p>Floating Scales Island - Lanayru Sky</p>
+              </li>
+              <li class="filterDiv gerudodesert">
+                <label for="main-seventeen">Riju of Gerudo Town</label>
+                <input type="checkbox" id="main-seventeen" class="checkbox"/>
+                <p>Gerudo Town - Gerudo Desert</p>
+              </li>
+              <li class="filterDiv">
+                <label for="main-eighteen">Find the Fifth Sage</label>
+                <input type="checkbox" id="main-eighteen" class="checkbox"/>
+              </li>
+    
+              <li class="filterDiv">
+                <label for="main-nineteen">Secret of the Ring Ruins</label>
+                <input type="checkbox" id="main-nineteen" class="checkbox"/>
+              </li>
+    
+              <li class="filterDiv">
+                <label for="main-twenty">Guidance from Ages Past</label>
+                <input type="checkbox" id="main-twenty" class="checkbox"/>
+              </li>
+    
+              <li class="filterDiv">
+                <label for="main-twentyone">Trail of the Master Sword</label>
+                <input type="checkbox" id="main-twentyone" class="checkbox"/>
+              </li>
+    
+              <li class="filterDiv">
+                <label for="main-twentytwo">Recovering the Hero's Sword</label>
+                <input type="checkbox" id="main-twentytwo" class="checkbox"/>
+              </li>
+    
+              <li class="filterDiv">
+                <label for="main-twentythree">Destroy Ganondorf</label>
+                <input type="checkbox" id="main-twentythree" class="checkbox"/>
+              </li>
+            </ul>
           </div>
-
-          <div class="dropdown">
-            <button onclick="skyFunction()" class="dropbtn">Sky</button>
-            <div id="skyDropdown" class="dropdown-content">
-              <a>Central Hyrule Sky</a>
-              <a>Lanayru Sky</a>
-            </div>
-
-          </div>
-        </div>
-
-        <ul class="container">
-          <li class="filterDiv central-sky show">
-            <label for="main-one">Find Princess Zelda</label>
-            <input type="checkbox" id="main-one" class="checkbox" />
-            <p>Great Sky Island - Central Hyrule Sky</p>
-          </li>
-          <li class="filterDiv central-sky">
-            <label for="main-two">The Closed Door</label>
-            <input type="checkbox" id="main-two" class="checkbox" />
-            <p>Great Sky Island - Central Hyrule Sky</p>
-          </li>
-          <li class="filterDiv central-sky">
-            <label for="main-three">To the Kingdom of Hyrule</label>
-            <input type="checkbox" id="main-three" class="checkbox"/>
-            <p>Great Sky Island - Central Hyrule Sky</p>
-          </li>
-          <li class="filterDiv northhyrule surface show">
-            <label for="main-four">Crisis at Hyrule Castle</label>
-            <input type="checkbox" id="main-four" class="checkbox"/>
-            <p>Lookout Landing - North Hyrule Field</p>
-          </li>
-          <li class="filterDiv hebramountains eldin gerudodesert lanayruspring surface">
-            <label for="main-five">Regional Phenomena</label>
-            <input type="checkbox" id="main-five" class="checkbox"/>
-            <p>Hebra, Eldin, Gerudo, Lanayru</p>
-          </li>
-          <li class="filterDiv nhydepths">
-            <label for="main-six">Camera Work in the Depths</label>
-            <input type="checkbox" id="main-six" class="checkbox"/>
-            <p>Iayusus Lightroot - North Hyrule Depths</p>
-          </li>
-          <li class="filterDiv hyruleridge surface">
-            <label for="main-seven">Impa and the Geoglyphs</label>
-            <input type="checkbox" id="main-seven" class="checkbox"/>
-            <p>New Serenne Stable - Hyrule Ridge</p>
-          </li>
-          <li class="filterDiv hyruleridge">
-            <label for="main-eight">The Dragon's Tears</label>
-            <input type="checkbox" id="main-eight" class="checkbox"/>
-            <p>Rauru Geoglyph - Hyrule Ridge</p>
-          </li>
-          <li class="filterDiv shydepths">
-            <label for="main-nine">A Mystery in the Depths</label>
-            <input type="checkbox" id="main-nine" class="checkbox"/>
-            <p>The Great Abandoned Central Mine - South Hyrule Depths</p>
-          </li>
-          <li class="filterDiv hebramountains surface">
-            <label for="main-ten">Tulin of Rito Village</label>
-            <input type="checkbox" id="main-ten" class="checkbox"/>
-            <p>Rito Village - Hebra Mountains</p>
-          </li>
-          <li class="filterDiv eldin surface">
-            <label for="main-eleven">Yunobo of Goron City</label>
-            <input type="checkbox" id="main-eleven" class="checkbox"/>
-            <p>Goron City - Eldin</p>
-          </li>
-          <li class="filterDiv lanayruspring surface">
-            <label for="main-twelve">The Sludge-Covered Statue</label>
-            <input type="checkbox" id="main-twelve" class="checkbox"/>
-            <p>Zora's Domain- Lanayru Great Spring</p>
-          </li>
-          <li class="filterDiv lanayruspring surface">
-            <label for="main-thirteen">Sidon of the Zora</label>
-            <input type="checkbox" id="main-thirteen" class="checkbox"/>
-            <p>Zora's Domain - Lanayru Great Spring</p>
-          </li>
-          <li class="filterDiv lanayruspring surface">
-            <label for="main-fourteen">Restoring the Zora Armor</label>
-            <input type="checkbox" id="main-fourteen" class="checkbox"/>
-            <p>Zora's Domain - Lanayru Great Spring</p>
-          </li>
-          <li class="filterDiv lanayruspring surface">
-            <label for="main-fifteen">The Broken Slate</label>
-            <input type="checkbox" id="main-fifteen" class="checkbox"/>
-            <p>Toto Lake - Lanayru Great Spring</p>
-          </li>
-          <li class="filterDiv lanayrusky">
-            <label for="main-sixteen">Clues to the Sky</label>
-            <input type="checkbox" id="main-sixteen" class="checkbox"/>
-            <p>Floating Scales Island - Lanayru Sky</p>
-          </li>
-          <li class="filterDiv gerudodesert surface">
-            <label for="main-seventeen">Riju of Gerudo Town</label>
-            <input type="checkbox" id="main-seventeen" class="checkbox"/>
-            <p>Gerudo Town - Gerudo Desert</p>
-          </li>
-          <li class="filterDiv surface">
-            <label for="main-eighteen">Find the Fifth Sage</label>
-            <input type="checkbox" id="main-eighteen" class="checkbox"/>
-            <p>Hyrule Castle - North Hyrule Field</p>
-          </li>
-
-          <li class="filterDiv">
-            <label for="main-nineteen">Secret of the Ring Ruins</label>
-            <input type="checkbox" id="main-nineteen" class="checkbox"/>
-          </li>
-
-          <li class="filterDiv">
-            <label for="main-twenty">Guidance from Ages Past</label>
-            <input type="checkbox" id="main-twenty" class="checkbox"/>
-          </li>
-
-          <li class="filterDiv">
-            <label for="main-twentyone">Trail of the Master Sword</label>
-            <input type="checkbox" id="main-twentyone" class="checkbox"/>
-          </li>
-
-          <li class="filterDiv">
-            <label for="main-twentytwo">Recovering the Hero's Sword</label>
-            <input type="checkbox" id="main-twentytwo" class="checkbox"/>
-          </li>
-
-          <li class="filterDiv">
-            <label for="main-twentythree">Destroy Ganondorf</label>
-            <input type="checkbox" id="main-twentythree" class="checkbox"/>
-          </li>
-        </ul>
-        
-      </div>
-        
-      <h3 class="accordion">Side Adventures</h3>
-        <ul class="panel">
-         <li>
-           <label for="sa-one">Hateno Village Research Lab</label>
-           <input type="checkbox" id="sa-one" class="checkbox" />
-         </li>
-
-         <li>
-           <label for="sa-two">Messages from an Ancient Era</label>
-           <input type="checkbox" id="sa-two" class="checkbox" />
-         </li>
-
-         <li>
-           <label for="sa-three">Who Goes There?</label>
-           <input type="checkbox" id="sa-three" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-four">A Deal With the Statue</label>
-          <input type="checkbox" id="sa-four" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-five">Bring Peace to Hyrule Field!</label>
-          <input type="checkbox" id="sa-five" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-six">Filling Out the Compendium</label>
-          <input type="checkbox" id="sa-six" class="checkbox" />
-         </li>
-
-         <li>
-           <label for="sa-seven">Presenting: The Travel Medallion!</label>
-           <input type="checkbox" id="sa-seven" class="checkbox" />
-         </li>
-
-         <li>
-           <label for="sa-eight">Presenting: Hero's Path Mode!</label>
-           <input type="checkbox" id="sa-eight" class="checkbox" />
-         </li>
-
-         <li>
-           <label for="sa-nine">Presenting: Sensor +!</label>
-           <input type="checkbox" id="sa-nine" class="checkbox" />
-         </li>
-
-         <li>
-           <label for="sa-ten">Mattison's Independence</label>
-           <input type="checkbox" id="sa-ten" class="checkbox" />
-          </li>
-
-         <li>
-          <label for="sa-eleven">A Letter to Koyin</label>
-          <input type="checkbox" id="sa-eleven" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-twelve">A New Signature Food </label>
-          <input type="checkbox" id="sa-twelve" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-thirteen">Reede's Secret</label>
-          <input type="checkbox" id="sa-thirteen" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-fourteen">Cece's Secret</label>
-          <input type="checkbox" id="sa-fourteen" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-fifteen">Team Cece or Team Reede?</label>
-          <input type="checkbox" id="sa-fifteen" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-sixteen">The Mayoral Election</label>
-          <input type="checkbox" id="sa-sixteen" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-seventeen">Ruffian-Infested Village</label>
-          <input type="checkbox" id="sa-seventeen" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-eighteen">Lurelin Village Restoration Project</label>
-          <input type="checkbox" id="sa-eighteen" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-ninteen">Potential Princess Sightings!</label>
-          <input type="checkbox" id="sa-ninteen" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-twenty">The Beckoning Woman</label>
-          <input type="checkbox" id="sa-twenty" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-twentyone">Gourmets Gone Missing</label>
-          <input type="checkbox" id="sa-twentyone" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-twentytwo">The Beast and the Princess</label>
-          <input type="checkbox" id="sa-twentytwo" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-twentythree">Zelda's Golden Horse</label>
-          <input type="checkbox" id="sa-twentythree" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-twentyfour">White Goats Gone Missing</label>
-          <input type="checkbox" id="sa-twentyfour" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-twentyfive">For Our Princess!</label>
-          <input type="checkbox" id="sa-twentyfive" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-twentysix">The All-Clucking Cucco</label>
-          <input type="checkbox" id="sa-twentysix" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-twentyseven">The Missing Farm Tools</label>
-          <input type="checkbox" id="sa-twentyseven" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-twentyeight">Princess Zelda Kidnapped?! </label>
-          <input type="checkbox" id="sa-twentyeight" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-twentynine">An Eerie Voice</label>
-          <input type="checkbox" id="sa-twentynine" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-thirty">The Blocked Well </label>
-          <input type="checkbox" id="sa-thirty" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-thirtyone">The Flute Player's Plan</label>
-          <input type="checkbox" id="sa-thirtyone" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-thirtytwo">Honey, Bee Mine</label>
-          <input type="checkbox" id="sa-thirtytwo" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-thirtythree">The Hornist's Dramatic Escape</label>
-          <input type="checkbox" id="sa-thirtythree" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-thirtyfour">Serenade to a Great Fairy</label>
-          <input type="checkbox" id="sa-thirtyfour" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-thirtyfive">Serenade to Kaysa </label>
-          <input type="checkbox" id="sa-thirtyfive" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-thirtysix">Serenade to Cotera</label>
-          <input type="checkbox" id="sa-thirtysix" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-thirtyseven">Serenade to Mija</label>
-          <input type="checkbox" id="sa-thirtyseven" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-thirtyeight">Bring Peace to Necluda!</label>
-          <input type="checkbox" id="sa-thirtyeight" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-thirtynine">Bring Peace to Eldin!</label>
-          <input type="checkbox" id="sa-thirtynine" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-forty">Bring Peace to Akkala!</label>
-          <input type="checkbox" id="sa-forty" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-fortyone">Bring Peace to Faron!</label>
-          <input type="checkbox" id="sa-fortyone" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-fortytwo">Bring Peace to Hebra!</label>
-          <input type="checkbox" id="sa-fortytwo" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-fortythree">Hestu's Concerns</label>
-          <input type="checkbox" id="sa-fortythree" class="checkbox" />
-        </li>
-
-         <li>
-          <label for="sa-fortyfour">The Hunt for Bubbul Gems!</label>
-          <input type="checkbox" id="sa-fortyfour" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-fortyfive">The Search for Koltin</label>
-          <input type="checkbox" id="sa-fortyfive" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-fortysix">A Monstrous Collection I </label>
-          <input type="checkbox" id="sa-fortysix" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-fortyseven">A Monstrous Collection II </label>
-          <input type="checkbox" id="sa-fortyseven" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-fortyeight">A Monstrous Collection III</label>
-          <input type="checkbox" id="sa-fortyeight" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-fortynine">A Monstrous Collection IV</label>
-          <input type="checkbox" id="sa-fortynine" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-fifty">A Monstrous Collection V</label>
-          <input type="checkbox" id="sa-fifty" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-fiftyone">Investigate the Thyphlo Ruins</label>
-          <input type="checkbox" id="sa-fiftyone" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-fiftytwo">The Owl Protected by Dragons</label>
-          <input type="checkbox" id="sa-fiftytwo" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-fiftythree">The Corridor between Two Dragons</label>
-          <input type="checkbox" id="sa-fiftythree" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-fiftyfour">The Six Dragons</label>
-          <input type="checkbox" id="sa-fiftyfour" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-fiftyfive">The Long Dragon</label>
-          <input type="checkbox" id="sa-fiftyfive" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-fiftysix">Legend of the Great Sky Island</label>
-          <input type="checkbox" id="sa-fiftysix" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-fiftyseven">A Call from the Depths</label>
-          <input type="checkbox" id="sa-fiftyseven" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-fiftyeight">Infiltrating the Yiga Clan</label>
-          <input type="checkbox" id="sa-fiftyeight" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-fiftynine">The Yiga Clan Exam</label>
-          <input type="checkbox" id="sa-fiftynine" class="checkbox" />
-         </li>
-
-         <li>
-          <label for="sa-sixty">Master Kohga of the Yiga Clan</label>
-          <input type="checkbox" id="sa-sixty" class="checkbox" />
-         </li>
-        </ul>
+            
+          <h3 class="accordion">Side Adventures</h3>
+            <ul class="panel">
+             <li>
+               <label for="sa-one">Hateno Village Research Lab</label>
+               <input type="checkbox" id="sa-one" class="checkbox" />
+             </li>
+    
+             <li>
+               <label for="sa-two">Messages from an Ancient Era</label>
+               <input type="checkbox" id="sa-two" class="checkbox" />
+             </li>
+    
+             <li>
+               <label for="sa-three">Who Goes There?</label>
+               <input type="checkbox" id="sa-three" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-four">A Deal With the Statue</label>
+              <input type="checkbox" id="sa-four" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-five">Bring Peace to Hyrule Field!</label>
+              <input type="checkbox" id="sa-five" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-six">Filling Out the Compendium</label>
+              <input type="checkbox" id="sa-six" class="checkbox" />
+             </li>
+    
+             <li>
+               <label for="sa-seven">Presenting: The Travel Medallion!</label>
+               <input type="checkbox" id="sa-seven" class="checkbox" />
+             </li>
+    
+             <li>
+               <label for="sa-eight">Presenting: Hero's Path Mode!</label>
+               <input type="checkbox" id="sa-eight" class="checkbox" />
+             </li>
+    
+             <li>
+               <label for="sa-nine">Presenting: Sensor +!</label>
+               <input type="checkbox" id="sa-nine" class="checkbox" />
+             </li>
+    
+             <li>
+               <label for="sa-ten">Mattison's Independence</label>
+               <input type="checkbox" id="sa-ten" class="checkbox" />
+              </li>
+    
+             <li>
+              <label for="sa-eleven">A Letter to Koyin</label>
+              <input type="checkbox" id="sa-eleven" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-twelve">A New Signature Food </label>
+              <input type="checkbox" id="sa-twelve" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-thirteen">Reede's Secret</label>
+              <input type="checkbox" id="sa-thirteen" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-fourteen">Cece's Secret</label>
+              <input type="checkbox" id="sa-fourteen" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-fifteen">Team Cece or Team Reede?</label>
+              <input type="checkbox" id="sa-fifteen" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-sixteen">The Mayoral Election</label>
+              <input type="checkbox" id="sa-sixteen" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-seventeen">Ruffian-Infested Village</label>
+              <input type="checkbox" id="sa-seventeen" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-eighteen">Lurelin Village Restoration Project</label>
+              <input type="checkbox" id="sa-eighteen" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-ninteen">Potential Princess Sightings!</label>
+              <input type="checkbox" id="sa-ninteen" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-twenty">The Beckoning Woman</label>
+              <input type="checkbox" id="sa-twenty" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-twentyone">Gourmets Gone Missing</label>
+              <input type="checkbox" id="sa-twentyone" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-twentytwo">The Beast and the Princess</label>
+              <input type="checkbox" id="sa-twentytwo" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-twentythree">Zelda's Golden Horse</label>
+              <input type="checkbox" id="sa-twentythree" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-twentyfour">White Goats Gone Missing</label>
+              <input type="checkbox" id="sa-twentyfour" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-twentyfive">For Our Princess!</label>
+              <input type="checkbox" id="sa-twentyfive" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-twentysix">The All-Clucking Cucco</label>
+              <input type="checkbox" id="sa-twentysix" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-twentyseven">The Missing Farm Tools</label>
+              <input type="checkbox" id="sa-twentyseven" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-twentyeight">Princess Zelda Kidnapped?! </label>
+              <input type="checkbox" id="sa-twentyeight" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-twentynine">An Eerie Voice</label>
+              <input type="checkbox" id="sa-twentynine" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-thirty">The Blocked Well </label>
+              <input type="checkbox" id="sa-thirty" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-thirtyone">The Flute Player's Plan</label>
+              <input type="checkbox" id="sa-thirtyone" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-thirtytwo">Honey, Bee Mine</label>
+              <input type="checkbox" id="sa-thirtytwo" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-thirtythree">The Hornist's Dramatic Escape</label>
+              <input type="checkbox" id="sa-thirtythree" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-thirtyfour">Serenade to a Great Fairy</label>
+              <input type="checkbox" id="sa-thirtyfour" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-thirtyfive">Serenade to Kaysa </label>
+              <input type="checkbox" id="sa-thirtyfive" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-thirtysix">Serenade to Cotera</label>
+              <input type="checkbox" id="sa-thirtysix" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-thirtyseven">Serenade to Mija</label>
+              <input type="checkbox" id="sa-thirtyseven" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-thirtyeight">Bring Peace to Necluda!</label>
+              <input type="checkbox" id="sa-thirtyeight" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-thirtynine">Bring Peace to Eldin!</label>
+              <input type="checkbox" id="sa-thirtynine" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-forty">Bring Peace to Akkala!</label>
+              <input type="checkbox" id="sa-forty" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-fortyone">Bring Peace to Faron!</label>
+              <input type="checkbox" id="sa-fortyone" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-fortytwo">Bring Peace to Hebra!</label>
+              <input type="checkbox" id="sa-fortytwo" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-fortythree">Hestu's Concerns</label>
+              <input type="checkbox" id="sa-fortythree" class="checkbox" />
+            </li>
+    
+             <li>
+              <label for="sa-fortyfour">The Hunt for Bubbul Gems!</label>
+              <input type="checkbox" id="sa-fortyfour" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-fortyfive">The Search for Koltin</label>
+              <input type="checkbox" id="sa-fortyfive" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-fortysix">A Monstrous Collection I </label>
+              <input type="checkbox" id="sa-fortysix" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-fortyseven">A Monstrous Collection II </label>
+              <input type="checkbox" id="sa-fortyseven" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-fortyeight">A Monstrous Collection III</label>
+              <input type="checkbox" id="sa-fortyeight" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-fortynine">A Monstrous Collection IV</label>
+              <input type="checkbox" id="sa-fortynine" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-fifty">A Monstrous Collection V</label>
+              <input type="checkbox" id="sa-fifty" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-fiftyone">Investigate the Thyphlo Ruins</label>
+              <input type="checkbox" id="sa-fiftyone" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-fiftytwo">The Owl Protected by Dragons</label>
+              <input type="checkbox" id="sa-fiftytwo" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-fiftythree">The Corridor between Two Dragons</label>
+              <input type="checkbox" id="sa-fiftythree" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-fiftyfour">The Six Dragons</label>
+              <input type="checkbox" id="sa-fiftyfour" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-fiftyfive">The Long Dragon</label>
+              <input type="checkbox" id="sa-fiftyfive" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-fiftysix">Legend of the Great Sky Island</label>
+              <input type="checkbox" id="sa-fiftysix" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-fiftyseven">A Call from the Depths</label>
+              <input type="checkbox" id="sa-fiftyseven" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-fiftyeight">Infiltrating the Yiga Clan</label>
+              <input type="checkbox" id="sa-fiftyeight" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-fiftynine">The Yiga Clan Exam</label>
+              <input type="checkbox" id="sa-fiftynine" class="checkbox" />
+             </li>
+    
+             <li>
+              <label for="sa-sixty">Master Kohga of the Yiga Clan</label>
+              <input type="checkbox" id="sa-sixty" class="checkbox" />
+             </li>
+            </ul>
 
       <h3 class="accordion">Shrine Quests</h3>
       <div class="panel">
@@ -720,7 +808,6 @@
 
   </main>
   <footer></footer>
-  <script src="dropdown.js"></script>
   <script src="filter.js"></script>
 </body>
 </html>

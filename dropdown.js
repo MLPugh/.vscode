@@ -1,83 +1,23 @@
-function allFunction() {
-  var allRegions = document.getElementById("allRegions");
-  var surfaceRegions = document.getElementById("surfaceRegions");
-  var skyRegions = document.getElementById("skyRegions");
-  var depthsRegions = document.getElementById("depthsRegions");
 
-  var surfaceDropdown = document.getElementById('surfaceDropdown');
-  var skyDropdown = document.getElementById('skyDropdown');
-  var depthsDropdown = document.getElementById('depthsDropdown');
-
-  allRegions.style.backgroundColor = "forestgreen";
-
-  surfaceRegions.style.backgroundColor =  "white";
-  skyRegions.style.backgroundColor =  "white";
-  depthsRegions.style.backgroundColor = "white";
-  
-  if(skyDropdown.classList.contains("show")) {
-    skyDropdown.classList.toggle("show");
-  }
-  else if(depthsDropdown.classList.contains("show")){
-    depthsDropdown.classList.toggle("show");
-  }else if(surfaceDropdown.classList.contains("show")) {
-    surfaceDropdown.classList.toggle("show");
-  }
-}
-
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
 function myFunction() {
-  var surfaceDropdown = document.getElementById('surfaceDropdown');
-  var skyDropdown = document.getElementById('skyDropdown');
-  var depthsDropdown = document.getElementById('depthsDropdown');
-
-  surfaceDropdown.classList.toggle("show");
-  surfaceRegions.style.backgroundColor = "forestgreen";
-
-  allRegions.style.backgroundColor =  "white";
-  skyRegions.style.backgroundColor =  "white";
-  depthsRegions.style.backgroundColor = "white";
-
-  if(skyDropdown.classList.contains("show")) {
-    skyDropdown.classList.toggle("show");
+    document.getElementById("myDropdown").classList.toggle("visi");
   }
-  else if(depthsDropdown.classList.contains("show")){
-    depthsDropdown.classList.toggle("show");
- }
-}
-
-function skyFunction() {
-  var surfaceDropdown = document.getElementById('surfaceDropdown');
-  var skyDropdown = document.getElementById('skyDropdown');
-  var depthsDropdown = document.getElementById('depthsDropdown');
   
-  skyDropdown.classList.toggle("show");
-  skyRegions.style.backgroundColor = "forestgreen";
-
-  allRegions.style.backgroundColor =  "white";
-  surfaceRegions.style.backgroundColor =  "white";
-  depthsRegions.style.backgroundColor = "white";
-  
-  if(surfaceDropdown.classList.contains("show")) {
-    surfaceDropdown.classList.toggle("show");
-  } else if(depthsDropdown.classList.contains("show")){
-    depthsDropdown.classList.toggle("show");
+  function skyFunction() {
+    document.getElementById("skyDropdown").classList.toggle("visi");
   }
-}
-          
-function depthsFunction() {
-    var surfaceDropdown = document.getElementById('surfaceDropdown');
-    var skyDropdown = document.getElementById('skyDropdown');
-    var depthsDropdown = document.getElementById('depthsDropdown');
-    
-    depthsDropdown.classList.toggle("show");
-    depthsRegions.style.backgroundColor = "forestgreen";
-
-  allRegions.style.backgroundColor =  "white";
-  surfaceRegions.style.backgroundColor =  "white";
-  skyRegions.style.backgroundColor = "white";
-    
-    if(surfaceDropdown.classList.contains("show")) {
-      surfaceDropdown.classList.toggle("show");
-    } else if(skyDropdown.classList.contains("show")){
-      skyDropdown.classList.toggle("show");
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('visi')) {
+          openDropdown.classList.remove('visi');
+        }
+      }
     }
-}
+  }  

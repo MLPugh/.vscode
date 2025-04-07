@@ -306,7 +306,9 @@
                   <a onclick="filterSelection('eastnecluda')">East Necluda</a>
                   <a onclick="filterSelection('akkala')">Akkala</a>
                   <a onclick="filterSelection('gerudodesert')">Gerudo Desert</a>
+                  <a onclick="filterSelection('greatforest')">Great Hyrule Forest</a>
                   <a onclick="filterSelection('tabanthatundra')">Tabantha Tundra</a>
+                  <a onclick="filterSelection('gerudohighlands')">Gerudo Highlands</a>
 
                 </div>
                 <button class="dropdown-btn">Sky
@@ -328,6 +330,7 @@
                 <div class="dropdown-container">
                   <a onclick="filterSelection('nhydepths')">North Hyrule Depths</a>
                   <a onclick="filterSelection('shydepths')">South Hyrule Depths</a>
+                  <a onclick="filterSelection('gddepths')">Gerudo Desert Depths</a>
                 </div>
               </div>
 
@@ -500,166 +503,197 @@
                   <p>Dueling Peaks Stable - West Necluda</p>
                 </li>
     
-                <li class="filterDiv">
+                <li class="filterDiv faron">
                   <label for="sa-twentynine">An Eerie Voice</label>
                   <input type="checkbox" id="sa-twentynine" class="checkbox" />
                   <p>Highland Stable - Faron</p>
                 </li>
     
-                <li class="filterDiv">
+                <li class="filterDiv gerudodesert">
                   <label for="sa-thirty">The Blocked Well </label>
                   <input type="checkbox" id="sa-thirty" class="checkbox" />
+                  <p>Gerudo Canyon Stable - Gerudo Desert</p>
                 </li>
     
-             <li class="filterDiv">
-              <label for="sa-thirtyone">The Flute Player's Plan</label>
-              <input type="checkbox" id="sa-thirtyone" class="checkbox" />
-             </li>
+                <li class="filterDiv faron">
+                  <label for="sa-thirtyone">The Flute Player's Plan</label>
+                  <input type="checkbox" id="sa-thirtyone" class="checkbox" />
+                  <p>Highland Stable - Faron</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-thirtytwo">Honey, Bee Mine</label>
-              <input type="checkbox" id="sa-thirtytwo" class="checkbox" />
-            </li>
+                <li class="filterDiv westnecluda">
+                  <label for="sa-thirtytwo">Honey, Bee Mine</label>
+                  <input type="checkbox" id="sa-thirtytwo" class="checkbox" />
+                  <p>West Necluda</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-thirtythree">The Hornist's Dramatic Escape</label>
-              <input type="checkbox" id="sa-thirtythree" class="checkbox" />
-            </li>
+                <li class="filterDiv hyruleridge">
+                  <label for="sa-thirtythree">The Hornist's Dramatic Escape</label>
+                  <input type="checkbox" id="sa-thirtythree" class="checkbox" />
+                  <p>Tabantha Frontier</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-thirtyfour">Serenade to a Great Fairy</label>
-              <input type="checkbox" id="sa-thirtyfour" class="checkbox" />
-             </li>
+                <li class="filterDiv eldin">
+                  <label for="sa-thirtyfour">Serenade to a Great Fairy</label>
+                  <input type="checkbox" id="sa-thirtyfour" class="checkbox" />
+                  <p>Woodland Stable - Eldin</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-thirtyfive">Serenade to Kaysa </label>
-              <input type="checkbox" id="sa-thirtyfive" class="checkbox" />
-             </li>
+                <li class="filterDiv southhyrule">
+                  <label for="sa-thirtyfive">Serenade to Kaysa </label>
+                  <input type="checkbox" id="sa-thirtyfive" class="checkbox" />
+                  <p>Outskirt Stable - South Hyrule Field</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-thirtysix">Serenade to Cotera</label>
-              <input type="checkbox" id="sa-thirtysix" class="checkbox" />
-            </li>
+                <li class="filterDiv westnecluda">
+                  <label for="sa-thirtysix">Serenade to Cotera</label>
+                  <input type="checkbox" id="sa-thirtysix" class="checkbox" />
+                  <p>Dueling Peaks Stable - West Necluda</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-thirtyseven">Serenade to Mija</label>
-              <input type="checkbox" id="sa-thirtyseven" class="checkbox" />
-             </li>
+                <li class="filterDiv tabanthatundra">
+                  <label for="sa-thirtyseven">Serenade to Mija</label>
+                  <input type="checkbox" id="sa-thirtyseven" class="checkbox" />
+                  <p>Snowfield Stable - Tabantha Tundra</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-thirtyeight">Bring Peace to Necluda!</label>
-              <input type="checkbox" id="sa-thirtyeight" class="checkbox" />
-            </li>
+                <li class="filterDiv westnecluda">
+                  <label for="sa-thirtyeight">Bring Peace to Necluda!</label>
+                  <input type="checkbox" id="sa-thirtyeight" class="checkbox" />
+                  <p>Fort Hateno - Lanayru Wetlands</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-thirtynine">Bring Peace to Eldin!</label>
-              <input type="checkbox" id="sa-thirtynine" class="checkbox" />
-            </li>
+                <li class="filterDiv eldin">
+                  <label for="sa-thirtynine">Bring Peace to Eldin!</label>
+                  <input type="checkbox" id="sa-thirtynine" class="checkbox" />
+                  <p>Lake Darman - Eldin</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-forty">Bring Peace to Akkala!</label>
-              <input type="checkbox" id="sa-forty" class="checkbox" />
-            </li>
+                <li class="filterDiv lanayruspring">
+                  <label for="sa-forty">Bring Peace to Akkala!</label>
+                  <input type="checkbox" id="sa-forty" class="checkbox" />
+                  <p>Upland Zorana Skyview Tower - Lanayru Great Spring</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fortyone">Bring Peace to Faron!</label>
-              <input type="checkbox" id="sa-fortyone" class="checkbox" />
-            </li>
+                <li class="filterDiv faron">
+                  <label for="sa-fortyone">Bring Peace to Faron!</label>
+                  <input type="checkbox" id="sa-fortyone" class="checkbox" />
+                  <p>Harfin Valley - Faron</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fortytwo">Bring Peace to Hebra!</label>
-              <input type="checkbox" id="sa-fortytwo" class="checkbox" />
-            </li>
+                <li class="filterDiv tabanthatundra">
+                  <label for="sa-fortytwo">Bring Peace to Hebra!</label>
+                  <input type="checkbox" id="sa-fortytwo" class="checkbox" />
+                  <p>South Tabantha Snowfield - Tabantha Tundra</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fortythree">Hestu's Concerns</label>
-              <input type="checkbox" id="sa-fortythree" class="checkbox" />
-            </li>
+                <li class="filterDiv northhyrule">
+                  <label for="sa-fortythree">Hestu's Concerns</label>
+                  <input type="checkbox" id="sa-fortythree" class="checkbox" />
+                  <p>Lookout Landing - North Hyrule Field</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fortyfour">The Hunt for Bubbul Gems!</label>
-              <input type="checkbox" id="sa-fortyfour" class="checkbox" />
-             </li>
+                <li class="filterDiv eldin">
+                  <label for="sa-fortyfour">The Hunt for Bubbul Gems!</label>
+                  <input type="checkbox" id="sa-fortyfour" class="checkbox" />
+                  <p>Pico Pond Cave - Eldin</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fortyfive">The Search for Koltin</label>
-              <input type="checkbox" id="sa-fortyfive" class="checkbox" />
-             </li>
+                <li class="filterDiv eldin">
+                  <label for="sa-fortyfive">The Search for Koltin</label>
+                  <input type="checkbox" id="sa-fortyfive" class="checkbox" />
+                  <p>Pico Pond Cave - Eldin</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fortysix">A Monstrous Collection I </label>
-              <input type="checkbox" id="sa-fortysix" class="checkbox" />
-             </li>
+                <li class="filterDiv akkala">
+                  <label for="sa-fortysix">A Monstrous Collection I </label>
+                  <input type="checkbox" id="sa-fortysix" class="checkbox" />
+                  <p>Tarry Town - Akkala</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fortyseven">A Monstrous Collection II </label>
-              <input type="checkbox" id="sa-fortyseven" class="checkbox" />
-             </li>
+                <li class="filterDiv akkala">
+                  <label for="sa-fortyseven">A Monstrous Collection II </label>
+                  <input type="checkbox" id="sa-fortyseven" class="checkbox" />
+                  <p>Tarry Town - Akkala</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fortyeight">A Monstrous Collection III</label>
-              <input type="checkbox" id="sa-fortyeight" class="checkbox" />
-             </li>
+                <li class="filterDiv akkala">
+                  <label for="sa-fortyeight">A Monstrous Collection III</label>
+                  <input type="checkbox" id="sa-fortyeight" class="checkbox" />
+                  <p>Tarry Town - Akkala</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fortynine">A Monstrous Collection IV</label>
-              <input type="checkbox" id="sa-fortynine" class="checkbox" />
-             </li>
+                <li class="filterDiv akkala">
+                  <label for="sa-fortynine">A Monstrous Collection IV</label>
+                  <input type="checkbox" id="sa-fortynine" class="checkbox" />
+                  <p>Tarry Town - Akkala</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fifty">A Monstrous Collection V</label>
-              <input type="checkbox" id="sa-fifty" class="checkbox" />
-             </li>
+                <li class="filterDiv akkala">
+                 <label for="sa-fifty">A Monstrous Collection V</label>
+                 <input type="checkbox" id="sa-fifty" class="checkbox" />
+                 <p>Tarry Town - Akkala</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fiftyone">Investigate the Thyphlo Ruins</label>
-              <input type="checkbox" id="sa-fiftyone" class="checkbox" />
-             </li>
+                <li class="filterDiv greatforest">
+                  <label for="sa-fiftyone">Investigate the Thyphlo Ruins</label>
+                  <input type="checkbox" id="sa-fiftyone" class="checkbox" />
+                  <p>Thyphlo Ruins - Great Hyrule Forest</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fiftytwo">The Owl Protected by Dragons</label>
-              <input type="checkbox" id="sa-fiftytwo" class="checkbox" />
-             </li>
+                <li class="filterDiv greatforest">
+                  <label for="sa-fiftytwo">The Owl Protected by Dragons</label>
+                  <input type="checkbox" id="sa-fiftytwo" class="checkbox" />
+                  <p>Thyphlo Ruins - Great Hyrule Forest</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fiftythree">The Corridor between Two Dragons</label>
-              <input type="checkbox" id="sa-fiftythree" class="checkbox" />
-             </li>
+                <li class="filterDiv greatforest">
+                  <label for="sa-fiftythree">The Corridor between Two Dragons</label>
+                  <input type="checkbox" id="sa-fiftythree" class="checkbox" />
+                  <p>Thyphlo Ruins - Great Hyrule Forest</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fiftyfour">The Six Dragons</label>
-              <input type="checkbox" id="sa-fiftyfour" class="checkbox" />
-             </li>
+                <li class="filterDiv greatforest">
+                  <label for="sa-fiftyfour">The Six Dragons</label>
+                  <input type="checkbox" id="sa-fiftyfour" class="checkbox" />
+                  <p>Thyphlo Ruins - Great Hyrule Forest</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fiftyfive">The Long Dragon</label>
-              <input type="checkbox" id="sa-fiftyfive" class="checkbox" />
-             </li>
+                <li class="filterDiv greatforest">
+                  <label for="sa-fiftyfive">The Long Dragon</label>
+                  <input type="checkbox" id="sa-fiftyfive" class="checkbox" />
+                  <p>Thyphlo Ruins - Great Hyrule Forest</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fiftysix">Legend of the Great Sky Island</label>
-              <input type="checkbox" id="sa-fiftysix" class="checkbox" />
-             </li>
+                <li class="filterDiv central-sky">
+                  <label for="sa-fiftysix">Legend of the Great Sky Island</label>
+                  <input type="checkbox" id="sa-fiftysix" class="checkbox" />
+                  <p>Great Sky Island - Central Hyrule Sky</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fiftyseven">A Call from the Depths</label>
-              <input type="checkbox" id="sa-fiftyseven" class="checkbox" />
-             </li>
+                <li class="filterDiv southhyrule">
+                  <label for="sa-fiftyseven">A Call from the Depths</label>
+                  <input type="checkbox" id="sa-fiftyseven" class="checkbox" />
+                  <p>Great Plateau - South Hyrule Field</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fiftyeight">Infiltrating the Yiga Clan</label>
-              <input type="checkbox" id="sa-fiftyeight" class="checkbox" />
-             </li>
+                <li class="filterDiv gerudohighlands">
+                  <label for="sa-fiftyeight">Infiltrating the Yiga Clan</label>
+                  <input type="checkbox" id="sa-fiftyeight" class="checkbox" />
+                  <p>Yiga Clan Hideout - Gerudo Highlands</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-fiftynine">The Yiga Clan Exam</label>
-              <input type="checkbox" id="sa-fiftynine" class="checkbox" />
-             </li>
+                <li class="filterDiv gerudodesert">
+                  <label for="sa-fiftynine">The Yiga Clan Exam</label>
+                  <input type="checkbox" id="sa-fiftynine" class="checkbox" />
+                  <p>Yiga Blademaster Station - Gerudo Desert</p>
+                </li>
     
-             <li class="filterDiv">
-              <label for="sa-sixty">Master Kohga of the Yiga Clan</label>
-              <input type="checkbox" id="sa-sixty" class="checkbox" />
-             </li>
+                <li class="filterDiv gddepths">
+                  <label for="sa-sixty">Master Kohga of the Yiga Clan</label>
+                  <input type="checkbox" id="sa-sixty" class="checkbox" />
+                  <p>Great Abandoned Central Mine - Gerudo Desert Depths</p>
+                </li>
               </ul>
             </ul>
 

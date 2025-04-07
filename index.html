@@ -48,7 +48,6 @@
           <p>Your one stop shop for 100% TOTK completion. Use ALL of our 
              checklists for free! Updated frequently!
           </p>
-    
         </section>
     
         <!-- Quests (Leads to Other Pages)-->
@@ -72,100 +71,110 @@
           <h3 class="accordion">Main Quests</h3>
     
           <div class="panel">
+          <style>
+            .sidenav {
+              float: left;
+              border: 1px solid #ccc;
+              background-color: #f1f1f1;
+              width: 30%;
+            }
+            
+            /* Style the sidenav links and the dropdown button */
+            .sidenav a, .dropdown-btn {
+              padding: 6px 8px 6px 16px;
+              text-decoration: none;
+              font-size: 20px;
+              color: black;
+              display: block;
+              border: none;
+              background: none;
+              width: 100%;
+              text-align: left;
+              cursor: pointer;
+              outline: none;
+            }
+            
+            /* On mouse-over */
+            .sidenav a:hover, .dropdown-btn:hover {
+              color: black;
+              background-color: #ddd;
+            }
+            
+            /* Main content */
+            .main {
+              margin-left: 200px; /* Same as the width of the sidenav */
+              font-size: 20px; /* Increased text to enable scrolling */
+              padding: 0px 10px;
+            }
+            
+            /* Add an active class to the active dropdown button */
+            .active {
+              background-color: green;
+              color: white;
+            }
+            
+            /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+            .dropdown-container {
+              display: none;
+              background-color: #f9f9f9;
+              padding-left: 8px;
+            }
+            
+            /* Optional: Style the caret down icon */
+            .fa-caret-down {
+              float: right;
+              padding-right: 8px;
+            }
+            </style>
+            </head>
+            <body>
+            
+            <div class="sidenav">
+              <button onclick="filterSelection('all')">All Regions</button>
+              <button class="dropdown-btn">Surface
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a onclick="filterSelection('northhyrule')">North Hyrule Field</a>
+                <a onclick="filterSelection('southhyrule')">South Hyrule Field</a>
+                <a onclick="filterSelection('hyruleridge')">Hyrule Ridge and Tabantha Frontier</a>
+                <a onclick="filterSelection('hebramountains')">Hebra Mountains</a>
+                <a onclick="filterSelection('eldin')">Eldin</a>
+                <a onclick="filterSelection('gerudodesert')">Gerudo Desert</a>
+                <a onclick="filterSelection('hyruleridge')">Hyrule Ridge and Tabantha Frontier</a>
+                <a onclick="filterSelection('hyruleridge')">Hyrule Ridge and Tabantha Frontier</a>
+                <a onclick="filterSelection('hyruleridge')">Hyrule Ridge and Tabantha Frontier</a>
+                <a onclick="filterSelection('lanayruspring')">Lanayru Great Spring</a>
+              </div>
+              <button class="dropdown-btn">Sky
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a onclick="filterSelection('central-sky')">Central Hyrule Sky</a>
+                <a onclick="filterSelection('hebra-sky')">Hebra Sky</a>
+                <a onclick="filterSelection('eldin-sky')">Eldin Sky</a>
+                <a onclick="filterSelection('akkala-sky')">Akkala Sky</a>
+                <a onclick="filterSelection('lanayrusky')">Lanayru Sky</a>
+                <a onclick="filterSelection('necluda-sky')">Necluda Sky</a>
+                <a onclick="filterSelection('faron-sky')">Faron Sky</a>
+                <a onclick="filterSelection('gerudo-sky')">Gerudo Sky</a>
+              </div>
+              <button class="dropdown-btn">Depths
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a onclick="filterSelection('nhydepths')">North Hyrule Depths</a>
+                <a onclick="filterSelection('shydepths')">South Hyrule Depths</a>
+              </div>
+            </div>
+
             <div class="tab" id="myBtnContainer">
             
-              <button class="btn tablinks" onclick="filterSelection('all')">All Regions</button>
-
-              <style>
-                .dropdown {
-                  position: relative;
-                  display: block;
-                  width: 100%;
-                }
-                
-                .dropdown-content {
-                  display: none;
-                  width: 100%;
-                  position: relative;
-                  background-color: #f9f9f9;
-                  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                  padding: 12px 16px;
-                  z-index: 1;
-                }
-                
-                
-                </style>
-
-                <script>
-                  function myfunction() {
-                    
-                    var surfacedropdown = document.querySelector('#surfacedropdown');
-                    var surfacebutton= document.querySelector('#surfacebutton');
-                    
-                    var northHyrule = document.querySelector("#northHyrule");
-
-                    surfacebutton.classList.toggle("active");
-
-                    if (surfacebutton.classList.contains('active')){
-                      surfacedropdown.style.display = "block";
-                      northHyrule.classList.toggle("active");
-                    }else {
-                      surfacedropdown.style.display = "none";
-                    }
-                  };
-
-                  function skyfunction() {
-                    var skydropdown = document.querySelector('#skydropdown');
-                    var skybutton = document.querySelector('#skybutton');
-
-                    skybutton.classList.toggle("active");
-                    
-                    if (skybutton.classList.contains('active')){
-                      skydropdown.style.display="block";
-                      surfacebutton.classList.toggle("active");
-                    } else {
-                      skydropdown.style.display = "none";
-                    }
-                  };
-
-                  function depthfunction() {
-                    var depthdropdown = document.querySelector('#depthdropdown');
-                    var depthbutton = document.querySelector('#depthbutton');
-
-                    depthbutton.classList.toggle("active");
-
-                    if (depthbutton.classList.contains('active')){
-                      depthdropdown.style.display="block";
-
-                      surfacebutton.classList.toggle("active");
-                      skybutton.classList.toggle("active");
-                    } else {
-                      depthdropdown.style.display = "none";
-                    }
-                  };
-  
-
-                </script>
+              <button id="allregions" class="btn tablinks" onclick="filterSelection('all')">All Regions</button>
                 
                 <div class="dropdown">
-                  <button id="surfacebutton" onclick="myfunction();">Surface</button>
-                  <div id="surfacedropdown" class="dropdown-content">
-                    <button  id="northHyrule" class="btn tablinks" onclick="filterSelection('northhyrule')">North Hyrule Field</button>
-                    <button class="btn tablinks" onclick="filterSelection('southhyrule')">South Hyrule Field</button>
-                    <button class="btn tablinks" onclick="filterSelection('hyruleridge')">Hyrule Ridge and Tabantha Frontier</button>
-                    <button class="btn tablinks" onclick="filterSelection('hebramountains')">Hebra Mountains</button>
-                    <button class="btn tablinks" onclick="filterSelection('eldin')">Eldin</button>
-                    <button class="btn tablinks" onclick="filterSelection('gerudodesert')">Gerudo Desert</button>
-                    <button class="btn tablinks" onclick="filterSelection('lanayruspring')">Lanayru Great Spring</button>
-                  </div>
-                </div>
-    
-                <div class="dropdown">
-                  <button id="skybutton" onclick="skyfunction();">Sky</button>
+                  <button class="btn tablinks" id="skybutton">Sky</button>
                   <div id="skydropdown" class="dropdown-content">
-                    <button class="btn tablinks" onclick="filterSelection('central-sky')">Central Hyrule Sky</button>
-                    <button class="btn tablinks" onclick="filterSelection('hebra-sky')">Hebra Sky</button>
-                    <button class="btn tablinks" onclick="filterSelection('eldin-sky')">Eldin Sky</button>
                     <button class="btn tablinks" onclick="filterSelection('akkala-sky')">Akkala Sky</button>
                     <button class="btn tablinks" onclick="filterSelection('lanayrusky')">Lanayru Sky</button>
                     <button class="btn tablinks" onclick="filterSelection('necluda-sky')">Necluda Sky</button>
@@ -175,7 +184,7 @@
                 </div>
 
                 <div class="dropdown">
-                  <button id="depthbutton" onclick="depthfunction();">Depths</button>
+                  <button class="btn tablinks" id="depthbutton">Depths</button>
                   <div id="depthdropdown" class="dropdown-content">
                     <button class="btn tablinks" onclick="filterSelection('nhydepths')">North Hyrule Depths</button>
                     <button class="btn tablinks" onclick="filterSelection('shydepths')">South Hyrule Depths</button>
@@ -808,6 +817,7 @@
 
   </main>
   <footer></footer>
+  <script src="menu.js"></script>
   <script src="filter.js"></script>
 </body>
 </html>

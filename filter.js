@@ -33,10 +33,17 @@ function w3RemoveClass(element, name) {
 // Add active class to the current button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn");
+var surfacebutton = document.getElementById("surfacebutton");
+var surfacedropdown = document.getElementById("surfacedropdown");
+
+var skybutton = document.getElementById("skybutton");
+var skydropdown = document.getElementById("skydropdown");
+
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace("active", "");
     this.className += " active";
+
   });
 }

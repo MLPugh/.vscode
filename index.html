@@ -80,10 +80,9 @@
             }
             
             /* Style the sidenav links and the dropdown button */
-            .sidenav a, .dropdown-btn {
-              padding: 6px 8px 6px 16px;
+            .sidenav a, .dropdown-btn, button {
+              padding: 22px 16px;
               text-decoration: none;
-              font-size: 20px;
               color: black;
               display: block;
               border: none;
@@ -94,22 +93,24 @@
               outline: none;
             }
             
+            button.active {
+              background-color: forestgreen;
+            } 
             /* On mouse-over */
-            .sidenav a:hover, .dropdown-btn:hover {
+            .sidenav a:hover, .dropdown-btn:hover, button:hover {
               color: black;
               background-color: #ddd;
             }
             
             /* Main content */
             .main {
-              margin-left: 200px; /* Same as the width of the sidenav */
-              font-size: 20px; /* Increased text to enable scrolling */
+              margin-left: 200px; /* Same as the width of the sidenav *//* Increased text to enable scrolling */
               padding: 0px 10px;
             }
             
             /* Add an active class to the active dropdown button */
             .active {
-              background-color: green;
+              background-color: forestgreen;
               color: white;
             }
             
@@ -120,6 +121,9 @@
               padding-left: 8px;
             }
             
+            .dropdown-container a{
+              font-size: 12px;
+            }
             /* Optional: Style the caret down icon */
             .fa-caret-down {
               float: right;
@@ -130,7 +134,7 @@
             <body>
             
             <div class="sidenav">
-              <button onclick="filterSelection('all')">All Regions</button>
+              <button class="button" onclick="filterSelection('all')">All Regions</button>
               <button class="dropdown-btn">Surface
                 <i class="fa fa-caret-down"></i>
               </button>
@@ -168,30 +172,6 @@
               </div>
             </div>
 
-            <div class="tab" id="myBtnContainer">
-            
-              <button id="allregions" class="btn tablinks" onclick="filterSelection('all')">All Regions</button>
-                
-                <div class="dropdown">
-                  <button class="btn tablinks" id="skybutton">Sky</button>
-                  <div id="skydropdown" class="dropdown-content">
-                    <button class="btn tablinks" onclick="filterSelection('akkala-sky')">Akkala Sky</button>
-                    <button class="btn tablinks" onclick="filterSelection('lanayrusky')">Lanayru Sky</button>
-                    <button class="btn tablinks" onclick="filterSelection('necluda-sky')">Necluda Sky</button>
-                    <button class="btn tablinks" onclick="filterSelection('faron-sky')">Faron Sky</button>
-                    <button class="btn tablinks" onclick="filterSelection('gerudo-sky')">Gerudo Sky</button>
-                  </div>
-                </div>
-
-                <div class="dropdown">
-                  <button class="btn tablinks" id="depthbutton">Depths</button>
-                  <div id="depthdropdown" class="dropdown-content">
-                    <button class="btn tablinks" onclick="filterSelection('nhydepths')">North Hyrule Depths</button>
-                    <button class="btn tablinks" onclick="filterSelection('shydepths')">South Hyrule Depths</button>
-                  </div>
-                </div>
-            </div>
-            
             <ul class="container">
               <li class="filterDiv central-sky">
                 <label for="main-one">Find Princess Zelda</label>

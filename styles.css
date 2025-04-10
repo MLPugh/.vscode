@@ -9,6 +9,10 @@ li, label, p {
   font-size: 12px;
 }
 
+p {
+  margin-bottom: 0px;
+}
+
 /* Style the tab */
 .tab {
   float: left;
@@ -17,6 +21,9 @@ li, label, p {
   width: 30%;
 }
 
+input {
+  margin-top: 0px;
+}
 /* Style the buttons that are used to open the tab content */
 .tab button {
   display: block;

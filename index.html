@@ -44,29 +44,32 @@
     - coordinates
     -->
 
-        <!--Home + Description-->
-        <section>
-          <h1>How to 100% Tears of the Kingdom</h1>
-          <h2>According to Exion Vault</h2>
+    <!--Home + Description-->
+    <section class="hero">
+      <h1>How to 100% Tears of the Kingdom</h1>
+      <p>(According to 
+        <a href="https://exionvault.com/zelda-tears-of-the-kingdom-100-completion/">Exion Vault)</a>
+      </p>
     
-          <h3>Free, Lightweight, and Comprehensive</h3>
-          <p>Your one stop shop for 100% TOTK completion. Use ALL of our 
-             checklists for free! Updated frequently!
-          </p>
-        </section>
+      <h2>Free, Lightweight, and Comprehensive</h2>
+        <p>Your one stop shop for 100% TOTK completion. Use ALL of our 
+          checklists for free! Updated frequently!
+        </p>
+      <hr>
+    </section>
     
-        <!-- Quests (Leads to Other Pages)-->
-        <section>
-          <!--Finish filtering once you finish story NO SPOILERS-->
-          <h2>Quests</h2>
-          <h3 class="accordion">Main Quests</h3>
-          <div class="panel">
-            <div class="sidenav">
-              <button class="button" onclick="filterSelection('all')">All Regions</button>
-              <button class="dropdown-btn">Surface
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-container">
+    <!-- Quests (Leads to Other Pages)-->
+    <section>
+      <!--Finish filtering once you finish story NO SPOILERS-->
+      <h2>Quests</h2>
+      <h3 class="accordion">Main Quests</h3>
+        <div class="panel">
+          <div class="sidenav">
+            <button class="button" onclick="filterSelection('all')">All Regions</button>
+            <button class="dropdown-btn">Surface
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
                 <a onclick="filterSelection('northhyrule')">North Hyrule Field</a>
                 <a onclick="filterSelection('hyruleridge')">Hyrule Ridge and Tabantha Frontier</a>
                 <a onclick="filterSelection('hebramountains')">Hebra Mountains</a>
@@ -1201,69 +1204,85 @@
             <input type="checkbox" id="sq-seventy" class="checkbox" />
             <p>East Akkala Stable - Akkala</p>
           </li>
-          <li>
+          <li class="filterDiv eldin">
             <label for="sq-seventyone">Hebra's Colossal Fossil</label>
             <input type="checkbox" id="sq-seventyone" class="checkbox" />
+            <p>Eldin Great Skeleton - Eldin</p>
           </li>
-          <li>
+          <li class="filterDiv hebra">
             <label for="sq-seventytwo">Gerudo's Colossal Fossil</label>
             <input type="checkbox" id="sq-seventytwo" class="checkbox" />
+            <p>Hebra Great Skeleton - Hebra Mountains</p>
           </li>
-          <li>
+          <li class="filterDiv akkala">
             <label for="sq-seventythree">One Hit Wonder!</label>
             <input type="checkbox" id="sq-seventythree" class="checkbox" />
+            <p>South Akkala Stable - Akkala</p>
           </li>
-          <li>
+          <li class="filterDiv akkala">
             <label for="sq-seventyfour">A Picture for South Akkala Stable</label>
             <input type="checkbox" id="sq-seventyfour" class="checkbox" />
+            <p>South Akkala Stable - Akkala</p>
           </li>
-          <li>
+          <li class="filterDiv lanayruspring">
             <label for="sq-seventyfive">True Treasure</label>
             <input type="checkbox" id="sq-seventyfive" class="checkbox" />
+            <p>Zora's Domain - Lanayru Great Spring</p>
           </li>
-          <li>
+          <li class="filterDiv lanayruspring">
             <label for="sq-seventysix">Secret Treasure under the Great Fish</label>
             <input type="checkbox" id="sq-seventysix" class="checkbox" />
+            <p>Zora's Domain - Lanayru Great Spring</p>
           </li>
-          <li>
+          <li class="filterDiv lanayruspring">
             <label for="sq-seventyseven">The Never-Ending Lecture</label>
             <input type="checkbox" id="sq-seventyseven" class="checkbox" />
+            <p>Zora's Domain - Lanayru Great Spring</p>
           </li>
-          <li>
+          <li class="filterDiv lanayruspring">
             <label for="sq-seventyeight">The Moonlit Princess</label>
             <input type="checkbox" id="sq-seventyeight" class="checkbox" />
+            <p>Zora's Domain - Lanayru Great Spring</p>
           </li>
-          <li>
+          <li class="filterDiv lanayruspring">
             <label for="sq-seventynine">The Fort at Ja’Abu Ridge</label>
             <input type="checkbox" id="sq-seventynine" class="checkbox" />
+            <p>Zora's Domain - Lanayru Great Spring</p>
           </li>
-          <li>
+          <li class="filterDiv lanayruspring">
             <label for="sq-eighty">Glory Of The Zora</label>
             <input type="checkbox" id="sq-eighty" class="checkbox" />
+            <p>Zora's Domain - Lanayru Great Spring</p>
           </li>
-          <li>
+          <li class="filterDiv lanayruspring">
             <label for="sq-eightyone">A Crabulous Deal</label>
             <input type="checkbox" id="sq-eightyone" class="checkbox" />
+            <p>Zora's Domain - Lanayru Great Spring</p>
           </li>
-          <li>
+          <li class="filterDiv lanayruspring">
             <label for="sq-eightytwo">A Wife Wafted Away</label>
             <input type="checkbox" id="sq-eightytwo" class="checkbox" />
+            <p>Zora's Domain - Lanayru Great Spring</p>
           </li>
-          <li>
+          <li class="filterDiv lanayruspring">
             <label for="sq-eightythree">A Token Of Friendship</label>
             <input type="checkbox" id="sq-eightythree" class="checkbox" />
+            <p>Zora's Domain - Lanayru Great Spring</p>
           </li>
-          <li>
+          <li class="filterDiv westnecluda">
             <label for="sq-eightyfour">A Picture for Wetland Stable</label>
             <input type="checkbox" id="sq-eightyfour" class="checkbox" />
+            <p>Wetland Stable - Lanayru Wetlands</p>
           </li>
           <li>
             <label for="sq-eightyfive">An Uninvited Guest</label>
             <input type="checkbox" id="sq-eightyfive" class="checkbox" />
+            <p>Wetland Stable - Lanayru Wetlands</p>
           </li>
           <li>
             <label for="sq-eightysix">The Blue Stone</label>
             <input type="checkbox" id="sq-eightysix" class="checkbox" />
+            <p>East Reservoir Lake</p>
           </li>
           <li>
             <label for="sq-eightyseven">The Ultimate Dish?</label>

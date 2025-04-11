@@ -26,7 +26,7 @@
     - Add Progress Bars for each category and/or region?
     - Sort Shrines
     - Add Content: Skyview Towers
-    - Buy me a coffee....
+    - ads?
     - Sort Lightroots
     - Add Content: Stables
     - Add mouseover + mouseout states for tab menu
@@ -39,7 +39,6 @@
     - spoilers toggle?
     - cleared for play store?
     - double check quest locations (region)
-    - ads?
     - seo
     - delete unused locations from each section
     - coordinates
@@ -832,6 +831,44 @@
 
       <h3 class="accordion">Side Quests</h3>
       <div class="panel">
+        <div class="sidenav">
+          <button class="button" onclick="filterSelection('all')">All Regions</button>
+          <button class="dropdown-btn">Surface
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a onclick="filterSelection('northhyrule')">North Hyrule Field</a>
+            <a onclick="filterSelection('southhyrule')">South Hyrule Field</a>
+            <a onclick="filterSelection('hyruleridge')">Hyrule Ridge and Tabantha Frontier</a>
+            <a onclick="filterSelection('hebramountains')">Hebra Mountains</a>
+            <a onclick="filterSelection('eldin')">Eldin</a>
+            <a onclick="filterSelection('gerudodesert')">Gerudo Desert</a>
+            <a onclick="filterSelection('hyruleridge')">Hyrule Ridge and Tabantha Frontier</a>
+            <a onclick="filterSelection('hyruleridge')">Hyrule Ridge and Tabantha Frontier</a>
+            <a onclick="filterSelection('hyruleridge')">Hyrule Ridge and Tabantha Frontier</a>
+            <a onclick="filterSelection('lanayruspring')">Lanayru Great Spring</a>
+          </div>
+          <button class="dropdown-btn">Sky
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a onclick="filterSelection('central-sky')">Central Hyrule Sky</a>
+            <a onclick="filterSelection('hebra-sky')">Hebra Sky</a>
+            <a onclick="filterSelection('eldin-sky')">Eldin Sky</a>
+            <a onclick="filterSelection('akkala-sky')">Akkala Sky</a>
+            <a onclick="filterSelection('lanayrusky')">Lanayru Sky</a>
+            <a onclick="filterSelection('necluda-sky')">Necluda Sky</a>
+            <a onclick="filterSelection('faron-sky')">Faron Sky</a>
+            <a onclick="filterSelection('gerudo-sky')">Gerudo Sky</a>
+          </div>
+          <button class="dropdown-btn">Depths
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a onclick="filterSelection('nhydepths')">North Hyrule Depths</a>
+            <a onclick="filterSelection('shydepths')">South Hyrule Depths</a>
+          </div>
+        </div>
         <ul class="container">
           <li class="filterDiv northhyrule">
             <label for="sq-one">Spotting Spot</label>
@@ -1093,77 +1130,95 @@
             <input type="checkbox" id="sq-fiftytwo" class="checkbox" />
             <p>Rebonae Bridge Well - North Hyrule Field</p>
           </li>
-          <li>
+          <li class="filterDiv eldin">
             <label for="sq-fiftythree">The Abandoned Laborer</label>
             <input type="checkbox" id="sq-fiftythree" class="checkbox" />
+            <p>Death Mountain West Tunnel - Eldin</p>
           </li>
-          <li>
+          <li class="filterDiv greatforest">
             <label for="sq-fiftyfour">The Treasure Hunters</label>
             <input type="checkbox" id="sq-fiftyfour" class="checkbox" />
+            <p>Rauru Hillside - Great Hyrule Forest</p>
           </li>
-          <li>
+          <li class="filterDiv eldin">
             <label for="sq-fiftyfive">Misko's Cave Of Chests</label>
             <input type="checkbox" id="sq-fiftyfive" class="checkbox" />
+            <p>Cephla Lake Cave - Eldin</p>
           </li>
-          <li>
+          <li class="filterDiv eldin">
             <label for="sq-fiftysix">Misko's Treasure: The Fierce Deity</label>
             <input type="checkbox" id="sq-fiftysix" class="checkbox" />
+            <p>Cephla Lake Cave - Eldin</p>
           </li>
-          <li>
+          <li class="filterDiv eldin">
             <label for="sq-fiftyseven">Misko's Treasure: Twins Manuscript</label>
             <input type="checkbox" id="sq-fiftyseven" class="checkbox" />
+            <p>Cephla Lake Cave - Eldin</p>
           </li>
-          <li>
+          <li class="filterDiv eldin">
             <label for="sq-fiftyeight">Misko's Treasure: Pirate Manuscript</label>
             <input type="checkbox" id="sq-fiftyeight" class="checkbox" />
+            <p>Cephla Lake Cave - Eldin</p>
           </li>
-          <li>
+          <li class="filterDiv eldin">
             <label for="sq-fiftynine">Misko's Treasure: Heroines Manuscript</label>
             <input type="checkbox" id="sq-fiftynine" class="checkbox" />
+            <p>Cephla Lake Cave - Eldin</p>
           </li>
-          <li>
+          <li class="filterDiv eldin">
             <label for="sq-sixty">Misko's Treasure of Awakening I</label>
             <input type="checkbox" id="sq-sixty" class="checkbox" />
+            <p>Goronbi River Cave - Eldin</p>
           </li>
-          <li>
+          <li class="filterDiv hyruleridge">
             <label for="sq-sixtyone">Misko's Treasure of Awakening II</label>
             <input type="checkbox" id="sq-sixtyone" class="checkbox" />
+            <p>Ancient Columns Cave - Tabantha Frontier</p>
           </li>
-          <li>
+          <li class="filterDiv southhyrule">
             <label for="sq-sixtytwo">Misko's Treasure of Awakening III</label>
             <input type="checkbox" id="sq-sixtytwo" class="checkbox" />
+            <p>Coliseum Ruins Cave - South Hyrule</p>
           </li>
-          <li>
+          <li class="filterDiv akkala">
             <label for="sq-sixtythree">The Tarrey Town Race is On!</label>
             <input type="checkbox" id="sq-sixtythree" class="checkbox" />
+            <p>Hudson Construction Site - Akkala</p>
           </li>
-          <li>
+          <li class="filterDiv akkala">
             <label for="sq-sixtyfour">Secrets Within</label>
             <input type="checkbox" id="sq-sixtyfour" class="checkbox" />
+            <p>Tarrey Town - Akkala</p>
           </li>
-          <li>
+          <li class="filterDiv akkala">
             <label for="sq-sixtyfive">Master The Vehicle Prototype</label>
             <input type="checkbox" id="sq-sixtyfive" class="checkbox" />
+            <p>Hudson Construction Site - Akkala</p>
           </li>
-          <li>
+          <li class="filterDiv akkala">
             <label for="sq-sixtysix">Home On Arrange</label>
             <input type="checkbox" id="sq-sixtysix" class="checkbox" />
+            <p>Tarrey Town - Akkala</p>
           </li>
-          <li>
+          <li class="filterDiv akkala">
             <label for="sq-sixtyseven">Strongest In The World</label>
             <input type="checkbox" id="sq-sixtyseven" class="checkbox" />
+            <p>East Akkala Stable - Akkala</p>
           </li>
-          <li>
+          <li class="filterDiv akkala">
             <label for="sq-sixtyeight">The Gathering Pirates</label>
             <input type="checkbox" id="sq-sixtyeight" class="checkbox" />
+            <p>East Akkala Stable - Akkala</p>
           </li>
-          <li>
+          <li class="filterDiv akkala">
             <label for="sq-sixtynine">A Picture for East Akkala Stable</label>
             <input type="checkbox" id="sq-sixtynine" class="checkbox" />
+            <p>East Akkala Stable - Akkala</p>
           </li>
-          <li>
+          <li class="filterDiv akkala">
             <label for="sq-seventy">Eldin's Colossal Fossil</label>
             <input type="checkbox" id="sq-seventy" class="checkbox" />
+            <p>East Akkala Stable - Akkala</p>
           </li>
           <li>
             <label for="sq-seventyone">Hebra's Colossal Fossil</label>

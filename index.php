@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>ToTK 100% Guide</title>
@@ -16,34 +15,7 @@
 <body>
   <header></header>
   <main>
-    <!--
-    To Do: 
-    - Sort Side Quests
-    - Add Content: Shrines
-    - Add Scroll Bar
-    - Sort Memories
-    - Add Content: Lightroots
-    - Add Progress Bars for each category and/or region?
-    - Sort Shrines
-    - Add Content: Skyview Towers
-    - ads?
-    - Sort Lightroots
-    - Add Content: Stables
-    - Add mouseover + mouseout states for tab menu
-    - Sort Lightroots
-    - Add Content: Great Fairies
-    - style section 1 banner. Header/Hero
-
-    - filter out completed
-    - Sort through css / refactor
-    - spoilers toggle?
-    - cleared for play store?
-    - double check quest locations (region)
-    - seo
-    - delete unused locations from each section
-    - coordinates
-    -->
-
+    
     <!--Home + Description-->
     <section class="hero">
       <h1>How to 100% Tears of the Kingdom</h1>
@@ -211,9 +183,10 @@
               </li>
             </ul>
           </div>
-            
-          <h3 class="accordion">Side Adventures</h3>
-          <ul class="panel">
+        </div>
+
+      <h3 class="accordion">Side Adventures</h3>
+        <ul class="panel">
             <div class="sidenav">
                 <button class="button" onclick="filterSelection('all')">All Regions</button>
                 <button class="dropdown-btn">Surface
@@ -611,19 +584,20 @@
                   <p>Great Abandoned Central Mine - Gerudo Desert Depths</p>
                 </li>
               </ul>
-          </ul>
-
-          <h3 class="accordion">Shrine Quests</h3>
-          <div class="panel">
-            <div class="sidenav">
-              <button class="button" onclick="filterSelection('all')">All Regions</button>
-              <button class="dropdown-btn">Surface
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-container">
-                <a onclick="filterSelection('northhyrule')">North Hyrule Field</a>
-                <a onclick="filterSelection('southhyrule')">South Hyrule Field</a>
-                <a onclick="filterSelection('hyruleridge')">Hyrule Ridge and Tabantha Frontier</a>
+            </ul>
+        </ul>
+      
+      <h3 class="accordion">Shrine Quests</h3>
+        <div class="panel">
+          <div class="sidenav">
+            <button class="button" onclick="filterSelection('all')">All Regions</button>
+            <button class="dropdown-btn">Surface
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+            <a onclick="filterSelection('northhyrule')">North Hyrule Field</a>
+            <a onclick="filterSelection('southhyrule')">South Hyrule Field</a>
+            <a onclick="filterSelection('hyruleridge')">Hyrule Ridge and Tabantha Frontier</a>
                 <a onclick="filterSelection('hebramountains')">Hebra Mountains</a>
                 <a onclick="filterSelection('eldin')">Eldin</a>
                 <a onclick="filterSelection('gerudodesert')">Gerudo Desert</a>
@@ -811,7 +785,7 @@
               </li>
             </ul>
           </div>
-
+        </div>
 
       <h3 class="accordion">Side Quests</h3>
       <div class="panel">
@@ -851,6 +825,7 @@
           <div class="dropdown-container">
             <a onclick="filterSelection('nhydepths')">North Hyrule Depths</a>
             <a onclick="filterSelection('shydepths')">South Hyrule Depths</a>
+            <a onclick="filterSelection('farondepths')">Faron Depths</a>
           </div>
         </div>
         <ul class="container">
@@ -1274,227 +1249,279 @@
             <input type="checkbox" id="sq-eightyfour" class="checkbox" />
             <p>Wetland Stable - Lanayru Wetlands</p>
           </li>
-          <li>
+          <li class="filterDiv westnecluda">
             <label for="sq-eightyfive">An Uninvited Guest</label>
             <input type="checkbox" id="sq-eightyfive" class="checkbox" />
             <p>Wetland Stable - Lanayru Wetlands</p>
           </li>
-          <li>
+          <li class="filterDiv lanayruspring">
             <label for="sq-eightysix">The Blue Stone</label>
             <input type="checkbox" id="sq-eightysix" class="checkbox" />
-            <p>East Reservoir Lake</p>
+            <p>East Reservoir Lake - Lanayru Great Spring</p>
           </li>
-          <li>
+          <li class="filterDiv westnecluda">
             <label for="sq-eightyseven">The Ultimate Dish?</label>
             <input type="checkbox" id="sq-eightyseven" class="checkbox" />
+            <p>Rikoka Hills Well - Lanayru Wetlands</p>
           </li>
-          <li>
+          <li class="filterDiv lanayruspring">
             <label for="sq-eightyeight">Mired In Muck</label>
             <input type="checkbox" id="sq-eightyeight" class="checkbox" />
+            <p>Upland Zorana Skyview Tower - Lanayru Great Spring</p>
           </li>
-          <li>
+          <li class="filterDiv westnecluda">
             <label for="sq-eightynine">Out of the Inn</label>
             <input type="checkbox" id="sq-eightynine" class="checkbox" />
+            <p>Kakariko Village - West Necluda</p>
           </li>
-          <li>
+          <li class="filterDiv westnecluda">
             <label for="sq-ninety">Follow The Cuccos</label>
             <input type="checkbox" id="sq-ninety" class="checkbox" />
+            <p>Kakariko Village - West Necluda</p>
           </li>
-          <li>
+          <li class="filterDiv westnecluda">
             <label for="sq-ninetyone">A Trip Through History</label>
             <input type="checkbox" id="sq-ninetyone" class="checkbox" />
+            <p>Kakariko Village - West Necluda</p>
           </li>
-          <li>
+          <li class="filterDiv westnecluda">
             <label for="sq-ninetytwo">Codgers' Quarrel</label>
             <input type="checkbox" id="sq-ninetytwo" class="checkbox" />
+            <p>Kakariko Village - West Necluda</p>
           </li>
-          <li>
+          <li class="filterDiv westnecluda">
             <label for="sq-ninetythree">Gloom-Borne Illness</label>
             <input type="checkbox" id="sq-ninetythree" class="checkbox" />
+            <p>Kakariko Village - West Necluda</p>
           </li>
-          <li>
+          <li class="filterDiv mountlan">
             <label for="sq-ninetyfour">A New Champion's Tunic</label>
             <input type="checkbox" id="sq-ninetyfour" class="checkbox" />
+            <p>Hateno Village - Mount Lanayru</p>
           </li>
-          <li>
+          <li class="filterDiv mountlan">
             <label for="sq-ninetyfive">Teach Me A Lesson I</label>
             <input type="checkbox" id="sq-ninetyfive" class="checkbox" />
+            <p>Hateno Village - Mount Lanayru</p>
           </li>
-          <li>
+          <li class="filterDiv mountlan">
             <label for="sq-ninetysix">Teach Me A Lesson II</label>
             <input type="checkbox" id="sq-ninetysix" class="checkbox" />
+            <p>Hateno Village - Mount Lanayru</p>
           </li>
-          <li>
+          <li class="filterDiv mountlan">
             <label for="sq-ninetyseven">Dantz's Prize Cows</label>
             <input type="checkbox" id="sq-ninetyseven" class="checkbox" />
+            <p>Hateno Village - Mount Lanayru</p>
           </li>
-          <li>
+          <li class="filterDiv mountlan">
             <label for="sq-ninetyeight">Homegrown in Hateno</label>
             <input type="checkbox" id="sq-ninetyeight" class="checkbox" />
           </li>
-          <li>
+          <li class="filterDiv mountlan">
             <label for="sq-ninetynine">Photographing a Chuchu</label>
             <input type="checkbox" id="sq-ninetynine" class="checkbox" />
+            <p>Hateno Village - Mount Lanayru</p>
           </li>
-          <li>
+          <li class="filterDiv mountlan">
             <label for="sq-onezerozero">Uma's Garden</label>
             <input type="checkbox" id="sq-onezerozero" class="checkbox" />
+            <p>Hateno Village - Mount Lanayru</p>
           </li>
-          <li>
+          <li class="filterDiv mountlan">
             <label for="sq-onezeroone">Manny's Beloved</label>
             <input type="checkbox" id="sq-onezeroone" class="checkbox" />
+            <p>Hateno Village - Mount Lanayru</p>
           </li>
-          <li>
+          <li class="filterDiv eastnecluda">
             <label for="sq-onezerotwo">Lurelin Resort Project</label>
             <input type="checkbox" id="sq-onezerotwo" class="checkbox" />
+            <p>Lurelin Village - East Necluda</p>
           </li>
-          <li>
+          <li class="filterDiv eastnecluda">
             <label for="sq-onezerothree">Dad's Blue Shirt</label>
             <input type="checkbox" id="sq-onezerothree" class="checkbox" />
+            <p>Lurelin Village - East Necluda</p>
           </li>
-          <li>
+          <li class="filterDiv eastnecluda">
             <label for="sq-onezerofour">A Way to Trade, Washed Away</label>
             <input type="checkbox" id="sq-onezerofour" class="checkbox" />
+            <p>Lurelin Village - East Necluda</p>
           </li>
-          <li>
+          <li class="filterDiv eastnecluda">
             <label for="sq-onezerofive">Rattled Ralera</label>
             <input type="checkbox" id="sq-onezerofive" class="checkbox" />
+            <p>Lurelin Village - East Necluda</p>
           </li>
-          <li>
+          <li class="filterDiv westnecluda">
             <label for="sq-onezerosix">A Picture for Dueling Peaks Stable</label>
             <input type="checkbox" id="sq-onezerosix" class="checkbox" />
+            <p>Dueling Peaks Stable - West Necluda</p>
           </li>
-          <li>
+          <li class="filterDiv mountlan">
             <label for="sq-onezeroseven">A Bottled Cry for Help</label>
             <input type="checkbox" id="sq-onezeroseven" class="checkbox" />
+            <p>Hateno Bay - Mount Lanayru</p>
           </li>
-          <li>
+          <li class="filterDiv eastnecluda">
             <label for="sq-onezeroeight">Seeking The Pirate Hideout</label>
             <input type="checkbox" id="sq-onezeroeight" class="checkbox" />
+            <p>Eventide Island - East Necluda</p>
           </li>
-          <li>
+          <li class="filterDiv faron">
             <label for="sq-onezeronine">Ousting The Giants</label>
             <input type="checkbox" id="sq-onezeronine" class="checkbox" />
+            <p>Lakeside Stable - Faron</p>
           </li>        
-          <li>
+          <li class="filterDiv faron">
             <label for="sq-oneten">A Picture for Lakeside Stable</label>
             <input type="checkbox" id="sq-oneten" class="checkbox" />
+            <p>Lakeside Stable - Faron</p>
           </li>   
-          <li>
+          <li class="filterDiv faron">
             <label for="sq-oneoneone">A Picture for Highland Stable</label>
             <input type="checkbox" id="sq-oneoneone" class="checkbox" />
+            <p>Highland Stable - Faron</p>
           </li> 
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-oneonetwo">The Heroines' Secret</label>
             <input type="checkbox" id="sq-oneonetwo" class="checkbox" />
+            <p>Gerudo Town - Gerudo Desert</p>
           </li>  
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-oneonethree">Treasure Of The Gerudo Desert</label>
             <input type="checkbox" id="sq-oneonethree" class="checkbox" />
+            <p>Gerudo Town - Gerudo Desert</p>
           </li>  
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-oneonefour">Pride of the Gerudo</label>
             <input type="checkbox" id="sq-oneonefour" class="checkbox" />
+            <p>Gerudo Town - Gerudo Desert</p>
           </li> 
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-oneonefive">Dalia's Game</label>
             <input type="checkbox" id="sq-oneonefive" class="checkbox" />
+            <p>Gerudo Town - Gerudo Desert</p>
           </li>  
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-oneonesix">The Mysterious Eighth</label>
             <input type="checkbox" id="sq-oneonesix" class="checkbox" />
+            <p>Gerudo Town - Gerudo Desert</p>
           </li>    
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-oneoneseven">The Missing Owner</label>
             <input type="checkbox" id="sq-oneoneseven" class="checkbox" />
+            <p>Gerudo Town - Gerudo Desert</p>
           </li>   
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-oneoneeight">To The Ruins!</label>
             <input type="checkbox" id="sq-oneoneeight" class="checkbox" />
+            <p>Gerudo Town - Gerudo Desert</p>
           </li>
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-oneonenine">Decorate With Passion</label>
             <input type="checkbox" id="sq-oneonenine" class="checkbox" />
+            <p>Kara Kara Bazaar - Gerudo Desert</p>
           </li> 
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-onetwenty">Lost In The Dunes</label>
             <input type="checkbox" id="sq-onetwenty" class="checkbox" />
+            <p>Kara Kara Bazaar - Gerudo Desert</p>
           </li> 
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-onetwoone">A Picture for the Closed Stable I</label>
             <input type="checkbox" id="sq-onetwoone" class="checkbox" />
+            <p>Gerudo Canyon Stable - Gerudo Desert</p>
           </li>  
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-onetwotwo">A Picture for the Closed Stable II</label>
             <input type="checkbox" id="sq-onetwotwo" class="checkbox" />
+            <p>Gerudo Canyon Stable - Gerudo Desert</p>
           </li>
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-onetwothree">Piaffe, Packed Away</label>
             <input type="checkbox" id="sq-onetwothree" class="checkbox" />
+            <p>Gerudo Canyon Stable - Gerudo Desert</p>
           </li>  
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-onetwofour">Gleeok Guts</label>
             <input type="checkbox" id="sq-onetwofour" class="checkbox" />
+            <p>Gerudo Canyon Stable - Gerudo Desert</p>
           </li> 
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-onetwofive">Disaster in Gerudo Canyon</label>
             <input type="checkbox" id="sq-onetwofive" class="checkbox" />
+            <p>Gerudo Canyon Pass - Gerudo Desert</p>
           </li>
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-onetwosix">The Great Tumbleweed Purge</label>
             <input type="checkbox" id="sq-onetwosix" class="checkbox" />
+            <p>Daval Peak - Gerudo Desert</p>
           </li>
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-onetwoseven">Heat-Endurance Contest!</label>
             <input type="checkbox" id="sq-onetwoseven" class="checkbox" />
+            <p>Mount Granajh - Gerudo Desert</p>
           </li>    
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-onetwoeight">Cold-Endurance Contest!</label>
             <input type="checkbox" id="sq-onetwoeight" class="checkbox" />
+            <p>Mount Granajh - Gerudo Desert</p>
           </li> 
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-onetwonine">The Iceless Icehouse</label>
             <input type="checkbox" id="sq-onetwonine" class="checkbox" />
+            <p>Northern Icehouse - Gerudo Desert</p>
           </li>
-          <li>
+          <li class="filterDiv akkala">
             <label for="sq-onethirty">Where Are The Wells?</label>
             <input type="checkbox" id="sq-onethirty" class="checkbox" />
+            <p>South Akkala Stable Well - Akkala</p>
           </li> 
-          <li>
+          <li class="filterDiv farondepths">
             <label for="sq-onethreeone">Ancient Blades Below</label>
             <input type="checkbox" id="sq-onethreeone" class="checkbox" />
+            <p>Spirit Temple - Faron Depths</p>
           </li> 
-          <li>
+          <li class="filterDiv tabanthatundra">
             <label for="sq-onethreetwo">The North Lomei Prophecy</label>
             <input type="checkbox" id="sq-onethreetwo" class="checkbox" />
+            <p>North Lomei Labyrinth - Tabantha Tundra</p>
           </li>
-          <li>
+          <li class="filterDiv akkala">
             <label for="sq-onethreethree">The Lomei Labyrinth Island Prophecy</label>
             <input type="checkbox" id="sq-onethreethree" class="checkbox" />
+            <p>Lomei Sky Labyrinth - Akkala</p>
           </li>
-          <li>
+          <li class="filterDiv gerudodesert">
             <label for="sq-onethreefour">The South Lomei Prophecy</label>
             <input type="checkbox" id="sq-onethreefour" class="checkbox" />
+            <p>South Lomei Labyrinth - Gerudo Desert</p>
           </li>
-          <li>
+          <li class="filterDiv mountlan">
             <label for="sq-onethreefive">Goddess Statue Of Wisdom</label>
             <input type="checkbox" id="sq-onethreefive" class="checkbox" />
+            <p>Spring of Wisdom - Mount Lanayru</p>
           </li> 
-          <li>
+          <li class="filterDiv akkala">
             <label for="sq-onethreesix">Goddess Statue Of Power</label>
             <input type="checkbox" id="sq-onethreesix" class="checkbox" />
+            <p>Spring of Power - Akkala</p>
           </li> 
-          <li>
+          <li class="filterDiv faron">
             <label for="sq-onethreeseven">Goddess Statue Of Courage</label>
             <input type="checkbox" id="sq-onethreeseven" class="checkbox" />
+            <p>Forgotten Temple - Faron</p>
           </li>
-          <li>
+          <li class="filterDiv faron">
             <label for="sq-onethreeeight">The Mother Goddess Statue</label>
             <input type="checkbox" id="sq-onethreeeight" class="checkbox" />
+            <p>Forgotten Temple - Faron</p>
           </li> 
-          <li>
+          <li class="filterDiv central-sky">
             <label for="sq-onethreenine">The Shrine Explorer</label>
             <input type="checkbox" id="sq-onefthreenine" class="checkbox" />
+            <p>Great Sky Island - Central Hyrule Sky</p>
           </li>        
         </ul>
       </div>
